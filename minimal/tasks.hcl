@@ -1,4 +1,8 @@
 resource "task" "first_task" {
+  config {
+    target = resource.container.ubuntu
+  }
+
   condition "file_exists" {
     description = "The file exists"
 
