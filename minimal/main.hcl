@@ -18,6 +18,7 @@ resource "lab" "minimal" {
 
    content {
     chapter "introduction" {
+      layout = "minimal"
       source = resource.chapter.introduction
     }
    }
