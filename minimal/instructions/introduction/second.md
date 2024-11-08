@@ -5,3 +5,5 @@ From Middle English secunde, second, secound, secund, borrowed from Old French s
 <instruqt-task id="exam">
   Create a file called `hello` in the `/tmp` directory and write the contents `world` to the file.
 </instruqt-task>
+
+<instruqt-completion heading="Congratualtions!" finish-button-label="Take me home"></instruqt-completion>
