@@ -38,6 +38,11 @@ resource "lab" "demo" {
       target = resource.editor.lab
     }
 
+    tab "terminal" {
+      panel = "instructions"
+      target = resource.terminal.ubuntu
+    }
+
     instructions {
       panel = "instructions"
     }
