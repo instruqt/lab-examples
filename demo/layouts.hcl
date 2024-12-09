@@ -6,11 +6,15 @@ resource "layout" "split_screen" {
   column "sandbox" {
     width = 67
 
-    row "code" {}
+    row "code" {
+      height = 67
+    }
     row "terminal" {
       height = 33
     }
   }
 
-  column "instructions" {}
+  column "instructions" {
+    width = 33
+  }
 }
