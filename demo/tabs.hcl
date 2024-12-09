@@ -21,11 +21,11 @@ resource "editor" "lab" {
 
   workspace "lab" {
     target = resource.container.ubuntu
-    directory = "/opt"
+    directory = "/opt/lab"
   }
 
-  # workspace "track" {
-  #   target = resource.container.ubuntu
-  #   directory = "/opt/track"
-  # }
+  workspace "track" {
+    target = resource.container.ubuntu
+    directory = "/opt/track"
+  }
 }
