@@ -1,6 +1,13 @@
-# Content Format Contraints
+# Content Format Limitations
 
 Customers want to do more with their content than our current toolkit supports.
+
+- Forced lineair flow, with must pass challenges
+- Limited styling and theming options
+- Lack of rich content types in assignments
+- Single, fixed layout option
+
+### Adding Skip Functionality
 
 They have built in hacks that allows you to skip scripts by creating files.
 
@@ -15,7 +22,9 @@ if [ -f /tmp/skip-cleanup ]; then
 fi
 ```
 
-They have built tracks that collect all hacks.
+### Adding Assets Support
+
+They have built entire tracks that collect all hacks for easier distribution.
 
 ```markdown
 ---
@@ -36,10 +45,10 @@ Insert this link into the assignment.md of your challenge to use the shared styl
 ![Copy style.css link address](../assets/style.css)
 ```
 
-and use those resources in all their tracks.
+And use those resources in all their tracks.
 
 ```markdown
-<link href="<https://play.instruqt.com/assets/tracks/hwckp0sgmmyg/aeaf29137dc322e07be4cc4cd1b3205b/assets/style.css>" rel="stylesheet">
+<link href="https://play.instruqt.com/assets/tracks/hwckp0sgmmyg/aeaf29137dc322e07be4cc4cd1b3205b/assets/style.css" rel="stylesheet">
 
 <div class="box callout info">
 If you have saved the value of your API key from a previous lab, you can re-use it here. Otherwise, follow the link provided in the terminal output to create a new API key.

@@ -1,7 +1,12 @@
 # Steep Learning Curve
 
-Almost every piece of content requires starting from scratch.
-They have to handle errors in script execution themselves.
+- Almost every piece of content requires starting from scratch
+- They have to handle errors in script execution themselves
+- Have to build custom images for best end user experience, requiring strong automation skills
+
+### Examples
+
+Basic bash plumbing.
 
 ```shell
 #!/bin/bash -l
