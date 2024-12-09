@@ -7,6 +7,11 @@ resource "copy" "lab" {
   destination = data("lab")
 }
 
+resource "copy" "track" {
+  source = "github.com/instruqt/templates//instruqt-tracks/kubernetes"
+  destination = data("track")
+}
+
 resource "container" "ubuntu" {
   image {
     name = "ubuntu"
@@ -21,5 +26,9 @@ resource "container" "ubuntu" {
   volume {
     source = data("lab")
     destination = "/opt/lab"
+  }
+  volume {
+    source = data("track")
+    destination = "/opt/track"
   }
 }

@@ -19,8 +19,13 @@ resource "editor" "ubuntu" {
 resource "editor" "lab" {
   title = "Editor"
 
-  workspace "home" {
+  workspace "lab" {
     target = resource.container.ubuntu
     directory = "/opt/lab"
+  }
+
+  workspace "track" {
+    target = resource.container.ubuntu
+    directory = "/opt/track"
   }
 }

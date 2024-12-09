@@ -86,6 +86,10 @@ resource "chapter" "behind_the_scenes" {
     file = "instructions/behind_the_scenes/creator_ui.md"
   }
 
+  page "modules" {
+    file = "instructions/behind_the_scenes/modules.md"
+  }
+
   page "versioning" {
     file = "instructions/behind_the_scenes/versioning.md"
   }
