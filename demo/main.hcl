@@ -2,24 +2,72 @@ resource "lab" "demo" {
   title = "Demo"
   description = "Showcase of the new lab format"
 
-   layout "minimal" {
-      default = true
-      source = resource.layout.minimal
+  layout "instruction_only" {
+    default = true
+    source = resource.layout.single_column
 
-      tab "terminal" {
-        panel = "terminal"
-        target = resource.terminal.shell
-      }
+    instructions {
+      panel = "instructions"
+    }
+  }
 
-      instructions {
-        panel = "instructions"
-      }
-   }
+  layout "split_screen" {
+    source = resource.layout.split_screen
 
-   content {
+    tab "code" {
+      panel = "code"
+      target = resource.editor.ubuntu
+    }
+
+    tab "shell" {
+      panel = "terminal"
+      target = resource.terminal.ubuntu
+    }
+
+    instructions {
+      active = true
+      panel = "instructions"
+    }
+  }
+
+  layout "full_code" {
+    source = resource.layout.single_column
+
+    tab "lab" {
+      active = true
+      panel = "instructions"
+      target = resource.editor.lab
+    }
+
+    instructions {
+      panel = "instructions"
+    }
+  }
+
+  content {
     chapter "introduction" {
-      layout = "minimal"
+      layout = "instruction_only"
       source = resource.chapter.introduction
     }
-   }
+
+    chapter "goals" {
+      layout = "instruction_only"
+      source = resource.chapter.goals
+    }
+
+    chapter "reimagined" {
+      layout = "instruction_only"
+      source = resource.chapter.reimagined
+    }
+
+    chapter "showcase" {
+      layout = "split_screen"
+      source = resource.chapter.showcase
+    }
+
+    chapter "behind_the_scenes" {
+      layout = "full_code"
+      source = resource.chapter.behind_the_scenes
+    }
+  }
 }
