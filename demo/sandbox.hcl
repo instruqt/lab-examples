@@ -29,10 +29,10 @@ resource "container" "ubuntu" {
 
   volume {
     source = resource.copy.lab.destination
-    destination = "/opt/lab"
+    destination = "/root/lab"
   }
   volume {
     source = resource.copy.track.destination
-    destination = "/opt/track"
+    destination = "/root/track"
   }
 }

@@ -35,12 +35,7 @@ resource "lab" "demo" {
     tab "lab" {
       active = true
       panel = "instructions"
-      target = resource.editor.lab
-    }
-
-    tab "terminal" {
-      panel = "instructions"
-      target = resource.terminal.ubuntu
+      target = resource.editor.ubuntu
     }
 
     instructions {

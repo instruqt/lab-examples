@@ -33,6 +33,10 @@ resource "chapter" "introduction" {
 resource "chapter" "goals" {
   title = "Goals"
 
+  page "goals" {
+    file = "instructions/goals/goals.md"
+  }
+
   page "lower_learning_curve" {
     file = "instructions/goals/lower_learning_curve.md"
   }
@@ -56,6 +60,10 @@ resource "chapter" "goals" {
 
 resource "chapter" "reimagined" {
   title = "Reimagined"
+
+  page "reimagined" {
+    file = "instructions/reimagined/reimagined.md"
+  }
 
   page "components" {
     file = "instructions/reimagined/components.md"

@@ -15,17 +15,3 @@ resource "editor" "ubuntu" {
     directory = "/root"
   }
 }
-
-resource "editor" "lab" {
-  title = "Editor"
-
-  workspace "lab" {
-    target = resource.container.ubuntu
-    directory = "/opt/lab"
-  }
-
-  workspace "track" {
-    target = resource.container.ubuntu
-    directory = "/opt/track"
-  }
-}
