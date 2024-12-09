@@ -17,6 +17,10 @@ resource "container" "ubuntu" {
     name = "ubuntu"
   }
 
+  resources {
+    memory = "512"
+  }
+
   command = ["tail", "-f", "/dev/null"]
 
 	network {

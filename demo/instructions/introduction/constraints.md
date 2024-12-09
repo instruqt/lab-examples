@@ -7,7 +7,7 @@ Customers want to do more with their content than our current toolkit supports.
 - Lack of rich content types in assignments
 - Single, fixed layout option
 
-## Adding Skip Functionality
+## Hacking Skip Functionality
 
 They have built in hacks that allows you to skip scripts by creating files.
 
@@ -22,7 +22,7 @@ if [ -f /tmp/skip-cleanup ]; then
 fi
 ```
 
-## Adding Assets Support
+## Hacking Assets Support
 
 They have built entire tracks that collect all hacks for easier distribution.
 
@@ -34,7 +34,7 @@ slug: track-assets
 The Instruqt CLI currently only uploads media assets. We can get it to upload a css file by linking to it as a (broken) image.
 
 Also, the CLI automatically converts the relative path to an asset to a full url in the format:
-<https://play.instruqt.com/assets/tracks/[TRACK_ID]/[ASSET_HASH]/assets/file.name>
+https://play.instruqt.com/assets/tracks/[TRACK_ID]/[ASSET_HASH]/assets/file.name
 
 If the file is modified, the asset_hash will change and you will need to update any links to it.
 

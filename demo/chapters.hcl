@@ -73,6 +73,11 @@ resource "chapter" "flow" {
   }
   page "activities" {
     file = "instructions/flow/activities.md"
+
+    validation = {
+      "exam" = resource.task.first_task
+      "quizzes" = resource.quiz.quizzes
+    }
   }
 }
 

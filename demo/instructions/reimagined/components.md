@@ -10,10 +10,10 @@
 
 ## Documents
 
-<instruqt-pdf url="https://cilium.isovalent.com/hubfs/Learning-eBPF%20-%20Full%20book.pdf"></instruqt-pdf>
+<instruqt-pdf url="https://cdn.instruqt.com/assets/Learning-eBPF%20-%20Full%20book.pdf"></instruqt-pdf>
 
 <instruqt-code language="html">
-  <instruqt-pdf url="https://cilium.isovalent.com/hubfs/Learning-eBPF%20-%20Full%20book.pdf"></instruqt-pdf>
+  <instruqt-pdf url="https://cdn.instruqt.com/assets/Learning-eBPF%20-%20Full%20book.pdf"></instruqt-pdf>
 </instruqt-code>
 
 ## Videos
@@ -29,6 +29,8 @@
 <instruqt-code language="js" run="true" copy="false">
   console.log("hello world");
 </instruqt-code>
+
+---
 
 <instruqt-code language="html">
   <instruqt-code language="js" run="true" copy="false">
@@ -50,6 +52,8 @@
   </instruqt-code>
 </instruqt-code-group>
 
+---
+
 <instruqt-code language="html">
   <instruqt-code-group>
     <instruqt-code title="Javascript" language="js" run="true" copy="true">
@@ -68,6 +72,8 @@
 
 <instruqt-switch-tab-button id="addendum">Switch to note</instruqt-switch-tab-button>
 
+---
+
 <instruqt-code language="html">
   <instruqt-switch-tab-button id="addendum">Switch to note</instruqt-switch-tab-button>
 </instruqt-code>
@@ -75,6 +81,8 @@
 ## Tab switch link
 
 <instruqt-switch-tab-link id="addendum">Switch to note</instruqt-switch-tab-link>
+
+---
 
 <instruqt-code language="html">
   <instruqt-switch-tab-link id="addendum">Switch to note</instruqt-switch-tab-link>
@@ -84,6 +92,8 @@
 
 <instruqt-feedback></instruqt-feedback>
 
+---
+
 <instruqt-code language="html">
   <instruqt-feedback></instruqt-feedback>
 </instruqt-code>
@@ -91,6 +101,8 @@
 ## Completion
 
 <instruqt-completion heading="Congratulations!" finish-button-label="Get me out of here"></instruqt-completion>
+
+---
 
 <instruqt-code language="html">
   <instruqt-completion heading="Congratulations!" finish-button-label="Get me out of here"></instruqt-completion>
