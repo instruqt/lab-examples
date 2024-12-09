@@ -25,7 +25,6 @@ resource "lab" "demo" {
     }
 
     instructions {
-      active = true
       panel = "instructions"
     }
   }
