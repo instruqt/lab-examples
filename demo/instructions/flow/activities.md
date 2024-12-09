@@ -15,9 +15,19 @@ Activities are a generalization of challenges and quizzes.
   Create a file called `hello` in the `/tmp` directory and write the contents `world` to the file.
 </instruqt-task>
 
+---
+
+<instruqt-code language="html">
+  <instruqt-task id="exam">
+    Create a file called `hello` in the `/tmp` directory and write the contents `world` to the file.
+  </instruqt-task>
+</instruqt-code>
+
 ## Example quiz
 
 <instruqt-quiz id="quizzes"></instruqt-quiz>
+
+---
 
 <instruqt-code language="html">
   <instruqt-quiz id="quizzes"></instruqt-quiz>

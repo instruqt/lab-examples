@@ -1,17 +1,20 @@
 resource "quiz" "quizzes" {
 	questions = [
-		resource.short_answer_question.capital_france,
+		resource.single_choice_question.capital_france,
 		resource.multiple_choice_question.cities_france,
 	]
 	show_hints = true
 }
 
-resource "short_answer_question" "capital_france" {
+resource "single_choice_question" "capital_france" {
 	question = "What is the capital of France?"
-	answer ="Paris"
+	answer = "Paris"
+	distractors = ["Lyon", "Nantes", "London", "Berlin"]
+
 	hints = [
-        "They host the olympics in 2024",
-		"The city is known for the Eiffel Tower"
+		"The correct answer is Paris .",
+		"No, really, it's Paris ..",
+		"Just pick Paris already ..."
 	]
 }
 
