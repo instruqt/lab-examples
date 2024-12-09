@@ -60,9 +60,9 @@ resource "lab" "demo" {
       source = resource.chapter.reimagined
     }
 
-    chapter "showcase" {
+    chapter "flow" {
       layout = "split_screen"
-      source = resource.chapter.showcase
+      source = resource.chapter.flow
     }
 
     chapter "behind_the_scenes" {
