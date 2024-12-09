@@ -7,7 +7,7 @@ Customers want to do more with their content than our current toolkit supports.
 - Lack of rich content types in assignments
 - Single, fixed layout option
 
-### Adding Skip Functionality
+## Adding Skip Functionality
 
 They have built in hacks that allows you to skip scripts by creating files.
 
@@ -22,7 +22,7 @@ if [ -f /tmp/skip-cleanup ]; then
 fi
 ```
 
-### Adding Assets Support
+## Adding Assets Support
 
 They have built entire tracks that collect all hacks for easier distribution.
 

@@ -4,7 +4,7 @@
 - They have to handle errors in script execution themselves
 - Have to build custom images for best end user experience, requiring strong automation skills
 
-### Examples
+## Examples
 
 Basic bash plumbing.
 

@@ -1,11 +1,24 @@
 # Activities
 
-- more powerful tasks
-- more types of quizzes
-- embed them anywhere in the content
-- mix and match
-- choose your own flow
+Activities are a generalization of challenges and quizzes.
 
-example task
+- Multiple conditions for a single task
+- More flexibility in creating setups, checks, solves and cleanups
+- Quizzes can contain multiple questions
+- Added support for different types of questions (multiple choice, text answer, fill in the blanks, etc)
+- Embed activities anywhere in the content
+- Mix and match tasks and quizzes
 
-example quiz
+## Example task
+
+<instruqt-task id="exam">
+  Create a file called `hello` in the `/tmp` directory and write the contents `world` to the file.
+</instruqt-task>
+
+## Example quiz
+
+<instruqt-quiz id="quizzes"></instruqt-quiz>
+
+<instruqt-code language="html">
+  <instruqt-quiz id="quizzes"></instruqt-quiz>
+</instruqt-code>

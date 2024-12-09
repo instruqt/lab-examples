@@ -63,9 +63,6 @@ resource "chapter" "reimagined" {
   page "layouts" {
     file = "instructions/reimagined/layouts.md"
   }
-  page "rich_content" {
-    file = "instructions/reimagined/rich_content.md"
-  }
 }
 
 resource "chapter" "flow" {
@@ -81,6 +78,10 @@ resource "chapter" "flow" {
 
 resource "chapter" "behind_the_scenes" {
   title = "Behind the Scenes"
+
+  page "feedback" {
+    file = "instructions/behind_the_scenes/feedback.md"
+  }
 
   page "creator_ui" {
     file = "instructions/behind_the_scenes/creator_ui.md"

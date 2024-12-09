@@ -2,7 +2,7 @@
 
 Feedback loop when creating content is very slow, time consuming and with limited visibility into the problems.
 
-### Unclear or cryptic errors
+## Unclear or cryptic errors
 
 ```shell
 2023-10-11T08:09:04Z vsltcifyuvyt ERROR: setup-workstation: Error running script: Process exited with status 1
@@ -17,7 +17,7 @@ Feedback loop when creating content is very slow, time consuming and with limite
 2023-10-11T08:36:14Z oebddiqvxhuh ERROR: setup failed: Process exited with status 1
 ```
 
-### Bash-Fu Skills Needed
+## Bash-Fu Skills Needed
 
 ```shell
 #!/usr/bin/env bash
@@ -26,7 +26,7 @@ Feedback loop when creating content is very slow, time consuming and with limite
 set -e, -u, -x, -o pipefail
 ```
 
-### Sometimes have to debug platform internals
+## Sometimes have to debug platform internals
 
 ```shell
 2023-10-04T12:16:13Z emeylfm7jboh INFO: Setting up environment
@@ -45,7 +45,7 @@ Error: the string provided in credentials is neither valid json nor a valid file
 2023-10-04T12:17:34Z emeylfm7jboh INFO: Terraform destroy succeeded
 ```
 
-### Logging lags and can be out of order
+## Logging lags and can be out of order
 
 ```shell
 $ instruqt track logs --since -2m

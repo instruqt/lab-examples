@@ -1,9 +1,9 @@
-# Chapters and Pages
+# Content Flow
 
-- chapters
-- pages
+Introducing a more flexible flow through content to support a wider array of use-cases, such as presentations and certifications.
 
-- show outline
-- page progression
-- unlocking
-- support non-linear flows
+## New concepts
+
+- Chapters and pages
+- Outline and page progression
+- Flexible unlocking, with support for non-linear flows

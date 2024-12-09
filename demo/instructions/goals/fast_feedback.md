@@ -7,11 +7,3 @@
 5. ⏰ Make it possible to catch errors early, even before running a lab.
 6. ⏰ Run labs in developer mode for interactive authoring and debugging.
 7. ⏰ Run functional tests for labs on schedule or on change
-
-![Clear structured output](/assets/start_output.png)
-
-![Visibility in runtime logs](/assets/logs_output.png)
-
-![Quickly find mistakes](/assets/parse_error.png)
-
-![Visibility in runtime errors](/assets/runtime_error.png)
