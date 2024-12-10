@@ -14,7 +14,7 @@ resource "copy" "track" {
 
 resource "container" "ubuntu" {
   image {
-    name = "ubuntu:noble-20241011"
+    name = "ubuntu:jammy"
   }
 
   resources {
