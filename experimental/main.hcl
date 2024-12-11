@@ -18,6 +18,7 @@ resource "lab" "minimal" {
 
   content {
     chapter "introduction" {
+      title = "Introduction"
       layout = "minimal"
       
       page "first" {
