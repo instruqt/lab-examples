@@ -26,7 +26,7 @@ resource "lab" "minimal" {
       }
 
       page "second" {
-        source = resource.page.first
+        source = resource.page.second
       }
     }
   }
