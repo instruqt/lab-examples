@@ -16,12 +16,21 @@ resource "lab" "minimal" {
     }
   }
 
+  layout "instructions_only" {
+    source = resource.layout.minimal
+
+    instructions {
+      panel = "instructions"
+    }
+  }
+
   content {
     chapter "introduction" {
       title = "Introduction"
       layout = "minimal"
       
       page "first" {
+        layout = "instructions_only"
         source = resource.page.first
       }
 
