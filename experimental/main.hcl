@@ -52,6 +52,7 @@ resource "lab" "minimal" {
 
       page "second" {
         source = module.chapter.pages.second
+      }
     }
   }
 }
