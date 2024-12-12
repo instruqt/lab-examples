@@ -47,11 +47,11 @@ resource "lab" "minimal" {
       title = "Imported"
 
       page "first" {
-        source = module.chapter.pages.first
+        source = module.chapter.output.pages.first
       }
 
       page "second" {
-        source = module.chapter.pages.second
+        source = module.chapter.output.pages.second
       }
     }
   }
