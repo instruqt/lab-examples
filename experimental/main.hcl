@@ -1,3 +1,7 @@
+module "chapter" {
+  source = "./modules/chapter"
+}
+
 resource "lab" "minimal" {
   title = "Minimal"
   description = "This is a minimal example lab."
@@ -37,6 +41,17 @@ resource "lab" "minimal" {
       page "second" {
         source = resource.page.second
       }
+    }
+
+    chapter "imported" {
+      title = "Imported"
+
+      page "first" {
+        source = module.chapter.pages.first
+      }
+
+      page "second" {
+        source = module.chapter.pages.second
     }
   }
 }
