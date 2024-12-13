@@ -6,6 +6,6 @@ From Middle English secunde, second, secound, secund, borrowed from Old French s
   Create a file called `hello` in the `/tmp` directory and write the contents `world` to the file.
 </instruqt-task>
 
-<instruqt-quiz id="france"></instruqt-quiz>
+<instruqt-quiz id="quiz"></instruqt-quiz>
 
 <instruqt-completion heading="You have completed the lab!" finish-button-label="Stop & Exit"></instruqt-completion>
