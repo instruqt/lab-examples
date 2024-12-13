@@ -7,5 +7,6 @@ resource "page" "second" {
 
   validation = {
     "exam" = resource.task.first_task
+    "quiz" = resource.quiz.france
   }
 }
