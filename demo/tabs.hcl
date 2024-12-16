@@ -1,7 +1,7 @@
 resource "terminal" "workstation" {
   title = "Terminal"
 
-  target = resource.container.workspace
+  target = resource.container.workstation
   
   shell = "/bin/bash"
   working_directory = "/root"
