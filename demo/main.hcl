@@ -16,12 +16,12 @@ resource "lab" "demo" {
 
     tab "code" {
       panel = "code"
-      target = resource.editor.ubuntu
+      target = resource.editor.workstation
     }
 
     tab "shell" {
       panel = "terminal"
-      target = resource.terminal.ubuntu
+      target = resource.terminal.workstation
     }
 
     instructions {
@@ -35,7 +35,7 @@ resource "lab" "demo" {
     tab "lab" {
       active = true
       panel = "instructions"
-      target = resource.editor.ubuntu
+      target = resource.editor.workstation
     }
 
     instructions {

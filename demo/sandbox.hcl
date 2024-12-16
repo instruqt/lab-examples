@@ -12,9 +12,9 @@ resource "copy" "track" {
   destination = data("track")
 }
 
-resource "container" "ubuntu" {
+resource "container" "workstation" {
   image {
-    name = "ubuntu:jammy"
+    name = "gcr.io/instruqt/debian"
   }
 
   resources {

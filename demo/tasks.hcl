@@ -1,6 +1,6 @@
 resource "task" "first_task" {
   config {
-    target = resource.container.ubuntu
+    target = resource.container.workstation
   }
 
   condition "file_exists" {
