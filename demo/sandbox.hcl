@@ -36,3 +36,27 @@ resource "container" "workstation" {
     destination = "/root/track"
   }
 }
+
+
+resource "container" "vscode" {
+  image {
+    name = "gcr.io/instruqt/vscode:0.1.0"
+  }
+
+  resources {
+    memory = 2048
+  }
+
+	network {
+		id = resource.network.main.meta.id
+	}
+
+  volume {
+    source = resource.copy.lab.destination
+    destination = "/home/coder/lab"
+  }
+  volume {
+    source = resource.copy.track.destination
+    destination = "/home/coder/lab"
+  }
+}
