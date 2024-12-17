@@ -56,13 +56,17 @@ resource "container" "vscode" {
     host = 8000
   }
 
+  environment = {
+    DEFAULT_FOLDER = "/home/coder/code"
+  }
+
   volume {
     source = resource.copy.lab.destination
-    destination = "/home/coder/lab"
+    destination = "/home/coder/code/lab"
   }
   volume {
     source = resource.copy.track.destination
-    destination = "/home/coder/track"
+    destination = "/home/coder/code/track"
   }
   
   health_check {
