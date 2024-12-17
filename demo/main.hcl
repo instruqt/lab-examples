@@ -19,6 +19,11 @@ resource "lab" "demo" {
       target = resource.editor.workstation
     }
 
+    tab "vscode" {
+      panel = "code"
+      target = resource.service.vscode
+    }
+
     tab "shell" {
       panel = "terminal"
       target = resource.terminal.workstation
