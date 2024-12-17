@@ -22,5 +22,5 @@ resource "service" "vscode" {
   target = resource.container.vscode
   scheme = "http"
   port = 8000
-  path = "/"
+  path = "/?folder=/home/coder/code"
 }
