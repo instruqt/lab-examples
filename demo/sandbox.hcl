@@ -57,6 +57,6 @@ resource "container" "vscode" {
   }
   volume {
     source = resource.copy.track.destination
-    destination = "/home/coder/lab"
+    destination = "/home/coder/track"
   }
 }
