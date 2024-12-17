@@ -51,6 +51,11 @@ resource "container" "vscode" {
 		id = resource.network.main.meta.id
 	}
 
+  port {
+    local = 8000
+    host = 8000
+  }
+
   volume {
     source = resource.copy.lab.destination
     destination = "/home/coder/lab"
