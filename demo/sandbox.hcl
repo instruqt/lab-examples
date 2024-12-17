@@ -64,4 +64,13 @@ resource "container" "vscode" {
     source = resource.copy.track.destination
     destination = "/home/coder/track"
   }
+  
+  health_check {
+    timeout = "30s"
+
+    http {
+      address = "http://localhost:8000"
+      success_codes = [200, 302]
+    }
+  }
 }
