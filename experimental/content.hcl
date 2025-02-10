@@ -5,7 +5,7 @@ resource "page" "first" {
 resource "page" "second" {
   file = "instructions/introduction/second.md"
 
-  validation = {
+  activities = {
     "exam" = resource.task.first_task
     "quiz" = resource.quiz.france
   }
