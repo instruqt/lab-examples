@@ -57,7 +57,7 @@ resource "lab" "demo" {
       }
 
       page "feedback" {
-        source = resource.page.feedback
+        source = resource.page.poor_feedback
       }
 
       page "dependencies" {
@@ -69,7 +69,7 @@ resource "lab" "demo" {
       }
 
       page "collaboration" {
-        source = resource.page.collaboration
+        source = resource.page.difficult_collaboration
       }
 
       page "conclusion" {
@@ -141,7 +141,7 @@ resource "lab" "demo" {
       layout = "full_code"
       
       page "feedback" {
-        source = resource.page.feedback
+        source = resource.page.actionable_feedback
       }
 
       page "creator_ui" {

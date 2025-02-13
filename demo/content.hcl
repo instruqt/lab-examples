@@ -6,7 +6,7 @@ resource "page" "learning_curve" {
   file = "instructions/introduction/learning_curve.md"
 }
 
-resource "page" "feedback" {
+resource "page" "poor_feedback" {
   file = "instructions/introduction/feedback.md"
 }
 
@@ -18,7 +18,7 @@ resource "page" "constraints" {
   file = "instructions/introduction/constraints.md"
 }
 
-resource "page" "collaboration" {
+resource "page" "difficult_collaboration" {
   file = "instructions/introduction/collaboration.md"
 }
 
@@ -74,7 +74,7 @@ resource "page" "activities" {
   }
 }
 
-resource "page" "feedback" {
+resource "page" "actionable_feedback" {
   file = "instructions/behind_the_scenes/feedback.md"
 }
 
