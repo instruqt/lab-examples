@@ -15,12 +15,3 @@ resource "editor" "workstation" {
     directory = "/root"
   }
 }
-
-# resource "service" "vscode" {
-#   title = "Code"
-
-#   target = resource.container.vscode
-#   scheme = "http"
-#   port = 8000
-#   path = "/?folder=/home/coder/code"
-# }

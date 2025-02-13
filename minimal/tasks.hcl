@@ -1,14 +1,4 @@
 resource "task" "first_task" {
-  # config {
-  #   target = resource.container.ubuntu
-  #   # parallel_condition = true
-  #   # parallel_check = true
-  #   # parallel_exec {
-  #   #   condition = true
-  #   #   check = false
-  #   # }
-  # }
-
   config {
       target = resource.container.ubuntu
       
@@ -22,7 +12,6 @@ resource "task" "first_task" {
 
     config {
       target = resource.container.ubuntu
-      # parallel_check = true
     }
 
     check {
