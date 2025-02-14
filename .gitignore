@@ -1,0 +1,15 @@
+.idea
+.envrc
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+/bin
+/dist
+*.iml
+/app/dbmigration/schema/*.down.sql
+*/**/.DS_Store
+.graphqlrc
+.env
+.DS_Store
+data/*.sql
+repositories/
