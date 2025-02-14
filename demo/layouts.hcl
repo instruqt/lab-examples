@@ -1,20 +1,5 @@
-resource "layout" "single_column" {
+resource "layout" "minimal" {
+  column "terminal" {}
+
   column "instructions" {}
-}
-
-resource "layout" "split_screen" {
-  column "sandbox" {
-    width = 67
-
-    row "code" {
-      height = 67
-    }
-    row "terminal" {
-      height = 33
-    }
-  }
-
-  column "instructions" {
-    width = 33
-  }
 }

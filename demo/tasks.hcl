@@ -1,6 +1,6 @@
 resource "task" "first_task" {
   config {
-    target = resource.container.workstation
+    target = resource.container.ubuntu
   }
 
   condition "file_exists" {
@@ -12,7 +12,7 @@ resource "task" "first_task" {
     }
 
     solve {
-      script  = "scripts/first_task/solve.sh"
+      script = "scripts/first_task/solve.sh"
     }
   }
 
