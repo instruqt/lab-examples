@@ -19,11 +19,6 @@ resource "lab" "demo" {
       target = resource.editor.workstation
     }
 
-    # tab "vscode" {
-    #   panel = "code"
-    #   target = resource.service.vscode
-    # }
-
     tab "shell" {
       panel = "terminal"
       target = resource.terminal.workstation
@@ -50,28 +45,116 @@ resource "lab" "demo" {
 
   content {
     chapter "introduction" {
+      title = "Introduction"
       layout = "instruction_only"
-      source = resource.chapter.introduction
+      
+      page "intro" {
+        source = resource.page.intro
+      }
+
+      page "learning_curve" {
+        source = resource.page.learning_curve
+      }
+
+      page "feedback" {
+        source = resource.page.poor_feedback
+      }
+
+      page "dependencies" {
+        source = resource.page.dependencies
+      }
+
+      page "constraints" {
+        source = resource.page.constraints
+      }
+
+      page "collaboration" {
+        source = resource.page.difficult_collaboration
+      }
+
+      page "conclusion" {
+        source = resource.page.conclusion
+      }
     }
 
     chapter "goals" {
+      title = "Goals"
       layout = "instruction_only"
-      source = resource.chapter.goals
+      
+      page "goals" {
+        source = resource.page.goals
+      }
+
+      page "lower_learning_curve" {
+        source = resource.page.lower_learning_curve
+      }
+
+      page "fast_feedback" {
+        source = resource.page.fast_feedback
+      }
+
+      page "explicitness" {
+        source = resource.page.explicitness
+      }
+
+      page "flexibility" {
+        source = resource.page.flexibility
+      }
+
+      page "better_collaboration" {
+        source = resource.page.better_collaboration
+      }
     }
 
     chapter "reimagined" {
+      title = "Reimagined"
       layout = "instruction_only"
-      source = resource.chapter.reimagined
+      
+      page "reimagined" {
+        source = resource.page.reimagined
+      }
+
+      page "components" {
+        source = resource.page.components
+      }
+
+      page "layouts" {
+        source = resource.page.layouts
+      }
     }
 
     chapter "flow" {
+      title = "Flow"
       layout = "split_screen"
-      source = resource.chapter.flow
+      
+      page "new_flow" {
+        source = resource.page.new_flow
+      }
+
+      page "activities" {
+        source = resource.page.activities  
+      }
     }
 
     chapter "behind_the_scenes" {
+      title = "Behind the Scenes"
       layout = "full_code"
-      source = resource.chapter.behind_the_scenes
+      
+      page "feedback" {
+        source = resource.page.actionable_feedback
+      }
+
+      page "creator_ui" {
+        source = resource.page.creator_ui
+      }
+
+      page "modules" {
+        source = resource.page.modules
+      }
+
+      page "versioning" {
+        source = resource.page.versioning
+      }
     }
   }
 }
