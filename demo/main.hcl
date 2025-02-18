@@ -2,6 +2,12 @@ resource "lab" "demo" {
   title = "Demo"
   description = "Showcase of the new lab format"
 
+  settings {
+    idle {
+      enabled = false
+    }
+  }
+
   layout "instruction_only" {
     default = true
     source = resource.layout.single_column
