@@ -6,6 +6,12 @@ resource "lab" "minimal" {
   title = "Minimal"
   description = "This is a minimal example lab."
 
+  settings {
+    idle {
+      enabled = false
+    }
+  }
+
   layout "minimal" {
     default = true
     source = resource.layout.minimal
