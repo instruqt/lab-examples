@@ -1,5 +1,5 @@
 resource "network" "main" {
-	subnet = "10.0.5.0/24"
+  subnet = "10.0.5.0/24"
 }
 
 resource "container" "nginx" {
@@ -7,7 +7,11 @@ resource "container" "nginx" {
     name = "nginx"
   }
 
-	network {
-		id = resource.network.main.meta.id
-	}
+  port {
+    local = 80
+  }
+
+  network {
+    id = resource.network.main.meta.id
+  }
 }

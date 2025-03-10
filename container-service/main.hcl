@@ -1,5 +1,5 @@
 resource "lab" "cotnainer_service" {
-  title = "Container Service"
+  title       = "Container Service"
   description = "This is an example lab with a single container sandbox and a service tab to display a web page hosted by the container."
 
   settings {
@@ -10,10 +10,10 @@ resource "lab" "cotnainer_service" {
 
   layout "two_column" {
     default = true
-    source = resource.layout.two_column
+    source  = resource.layout.two_column
 
     tab "nginx" {
-      panel = "left"
+      panel  = "left"
       target = resource.service.nginx
     }
 
@@ -25,10 +25,10 @@ resource "lab" "cotnainer_service" {
   content {
     chapter "introduction" {
       title = "Introduction"
-      
+
       page "first" {
         source = resource.page.first
       }
     }
   }
-}   
+}

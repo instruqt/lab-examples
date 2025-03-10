@@ -1,5 +1,5 @@
 resource "lab" "container_terminal" {
-  title = "Container Terminal"
+  title       = "Container Terminal"
   description = "This is an example lab with a single container sandbox and a terminal tab."
 
   settings {
@@ -10,10 +10,10 @@ resource "lab" "container_terminal" {
 
   layout "two_column" {
     default = true
-    source = resource.layout.two_column
+    source  = resource.layout.two_column
 
     tab "terminal" {
-      panel = "terminal"
+      panel  = "terminal"
       target = resource.terminal.shell
     }
 
@@ -25,10 +25,10 @@ resource "lab" "container_terminal" {
   content {
     chapter "introduction" {
       title = "Introduction"
-      
+
       page "first" {
         source = resource.page.first
       }
     }
   }
-}   
+}
