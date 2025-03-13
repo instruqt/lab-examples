@@ -1,5 +1,4 @@
 # lab-examples
-
 Example Labs
 
 | Lab                                      | Description                                                                          |
