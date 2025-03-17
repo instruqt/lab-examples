@@ -17,6 +17,8 @@ resource "container" "workstation" {
     name = "bitnami/kubectl"
   }
 
+  entrypoint = ["/bin/bash"]
+
   network {
     id = resource.network.main.meta.id
   }
