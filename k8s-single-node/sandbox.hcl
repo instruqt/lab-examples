@@ -21,7 +21,8 @@ resource "container" "workstation" {
     id = resource.network.main.meta.id
   }
 
-  environment = {
-    KUBECONFIG = resource.k8s_cluster.k3s.kube_config.path
+  volume {
+    source      = resource.k8s_cluster.k3s.kube_config.path
+    destination = "/root/.kube/config"
   }
 }
