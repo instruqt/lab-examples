@@ -14,7 +14,7 @@ output "KUBECONFIG" {
 
 resource "container" "workstation" {
   image {
-    name = "ubuntu"
+    name = "bitname/kubectl"
   }
 
   network {
