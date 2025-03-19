@@ -10,7 +10,7 @@ resource "lab" "task" {
 
   layout "single_column" {
     default = true
-    source = resource.layout.single_column
+    reference = resource.layout.single_column
 
     instructions {
       panel = "instructions"
@@ -22,7 +22,7 @@ resource "lab" "task" {
       title = "Introduction"
       
       page "first" {
-        source = resource.page.first
+        reference = resource.page.first
       }
     }
   }
