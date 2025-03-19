@@ -14,7 +14,7 @@ resource "lab" "minimal" {
 
   layout "minimal" {
     default = true
-    source = resource.layout.minimal
+    reference = resource.layout.minimal
 
     tab "terminal" {
       panel = "terminal"
@@ -27,7 +27,7 @@ resource "lab" "minimal" {
   }
 
   layout "instructions_only" {
-    source = resource.layout.minimal
+    reference = resource.layout.minimal
 
     instructions {
       panel = "instructions"
@@ -37,15 +37,15 @@ resource "lab" "minimal" {
   content {
     chapter "introduction" {
       title = "Introduction"
-      layout = "minimal"
+      layout_name = "minimal"
       
       page "first" {
-        layout = "instructions_only"
-        source = resource.page.first
+        layout_name = "instructions_only"
+        reference = resource.page.first
       }
 
       page "second" {
-        source = resource.page.second
+        reference = resource.page.second
       }
     }
 
@@ -53,11 +53,11 @@ resource "lab" "minimal" {
       title = "Imported"
 
       page "first" {
-        source = module.chapter.output.pages.first
+        reference = module.chapter.output.pages.first
       }
 
       page "second" {
-        source = module.chapter.output.pages.second
+        reference = module.chapter.output.pages.second
       }
     }
   }

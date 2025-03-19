@@ -10,7 +10,7 @@ resource "lab" "task" {
 
   layout "two_column" {
     default = true
-    source = resource.layout.two_column
+    reference = resource.layout.two_column
 
     tab "terminal" {
       panel = "terminal"
@@ -27,7 +27,7 @@ resource "lab" "task" {
       title = "Introduction"
       
       page "first" {
-        source = resource.page.first
+        reference = resource.page.first
       }
     }
   }

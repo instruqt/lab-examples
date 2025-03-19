@@ -10,7 +10,7 @@ resource "lab" "container_service" {
 
   layout "two_column" {
     default = true
-    source  = resource.layout.two_column
+    reference  = resource.layout.two_column
 
     tab "nginx" {
       panel  = "left"
@@ -27,7 +27,7 @@ resource "lab" "container_service" {
       title = "Introduction"
 
       page "first" {
-        source = resource.page.first
+        reference = resource.page.first
       }
     }
   }
