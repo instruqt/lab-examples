@@ -1,3 +1,7 @@
-# Container terminal
+# Single node Kubernetes cluster
 
-In the left pane there is a terminal session on the ubuntu container.
+This labs contains a single node kubernetes cluster, with a terminal preconfigured to interact with it.
+
+```run
+kubectl list nodes
+```
