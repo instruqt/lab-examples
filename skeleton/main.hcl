@@ -5,7 +5,7 @@ resource "lab" "main" {
   You can use this as a minimal starting point for developing labs.
   EOF
 
-  layout "single_panel" {
+  layout "single_column" {
     reference = resource.layout.single_panel
   }
 }
