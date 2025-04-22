@@ -2,7 +2,7 @@
 
 ## Slides
 
-<instruqt-slides id="10l3hHEqEzkjz26ZBXSAWsZ7ory8fdie1Uy1_TqMmc9I"></instruqt-slides>
+<instruqt-slides url="https://docs.google.com/presentation/d/1XAaaiB1PtAbHNxEmBTWLfQZqNCnZ2rFC2jQP-fov10s/edit?usp=sharing"></instruqt-slides>
 
 <instruqt-code language="html">
   <instruqt-slides id="10l3hHEqEzkjz26ZBXSAWsZ7ory8fdie1Uy1_TqMmc9I"></instruqt-slides>
