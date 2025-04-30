@@ -29,7 +29,7 @@ resource "numeric_answer_question" "regions" {
 
 resource "multiple_choice_question" "food" {
   question = "Which of these dishes are french?"
-  answers = ["Croissant", "Ratatouille"]
+  answer = ["Croissant", "Ratatouille"]
   distractors = ["Mushy Peas", "Hamburger", "Sushi"]
   hints = [
     "One of these dishes is a pastry.",
