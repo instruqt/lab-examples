@@ -4,7 +4,7 @@ resource "lab" "demo" {
 
   settings {
     idle {
-      enabled = false
+      enabled = true
     }
   }
 
