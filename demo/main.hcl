@@ -4,6 +4,7 @@ resource "lab" "demo" {
 
   settings {
     idle {
+      show_warning = true
       enabled = true
     }
   }
