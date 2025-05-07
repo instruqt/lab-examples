@@ -6,6 +6,7 @@ resource "lab" "demo" {
     idle {
       show_warning = true
       enabled = true
+      timeout = "2m"
     }
   }
 
