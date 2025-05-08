@@ -9,7 +9,6 @@ resource "container" "nginx" {
 
   port {
     local = 80
-    host  = 80
   }
 
   network {
