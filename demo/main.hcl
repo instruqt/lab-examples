@@ -1,5 +1,5 @@
 resource "lab" "demo" {
-  title       = "Deeemooo"
+  title       = "Demoo"
   description = "file([\"description.md\"])"
 
   settings {
