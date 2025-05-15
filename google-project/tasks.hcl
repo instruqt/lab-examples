@@ -16,12 +16,15 @@ resource "task" "remote" {
 
     check {
       script          = "scripts/file_exists.sh"
-      variables = {
-        user = resource.google_project.my_project.service_account.0.name
-        host = resource.terraform.provision_resources.output.instance_ip
-        key = resource.exec.generate_ssh_key.environment["file"]
-      }
       failure_message = "The file could not be found at /tmp/hello"
+
+      config {
+        environment = {
+          user = resource.google_project.my_project.service_account.0.name
+          host = resource.terraform.provision_resources.output.instance_ip
+          key = resource.exec.generate_ssh_key.environment["file"]
+        }
+      }
     }
   }
 }
