@@ -1,7 +1,7 @@
 resource "terminal" "shell" {
   title = "Terminal"
 
-  target = resource.k8s_cluster.k3s
+  target = resource.container.workstation
 
   shell             = "/bin/bash"
   working_directory = "/root"

@@ -9,8 +9,8 @@ resource "lab" "k8s_single_node" {
   }
 
   layout "two_column" {
-    default = true
-    source  = resource.layout.two_column
+    default   = true
+    reference = resource.layout.two_column
 
     tab "terminal" {
       panel  = "terminal"
@@ -27,7 +27,7 @@ resource "lab" "k8s_single_node" {
       title = "Introduction"
 
       page "first" {
-        source = resource.page.first
+        reference = resource.page.first
       }
     }
   }

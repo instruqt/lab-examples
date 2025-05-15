@@ -27,4 +27,8 @@ resource "container" "workstation" {
     source      = resource.k8s_cluster.k3s.kube_config.path
     destination = "/root/.kube/config"
   }
+
+  environment = {
+    KUBECONFIG = "/root/.kube/config"
+  }
 }
