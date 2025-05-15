@@ -1,17 +1,26 @@
 resource "lab" "demo" {
-  title = "Demo"
-  description = file("description.md")
+  title       = "Deeemooo"
+  description = "file([\"description.md\"])"
 
   settings {
     idle {
       show_warning = true
-      enabled = true
-      timeout = "2m"
+      enabled      = true
+      timeout      = "2m"
+    }
+    theme = "modern-dark"
+    timelimit {
+      duration  = "15m"
+      extend    = "0"
+      showTimer = true
+    }
+    controls {
+      showStop = true
     }
   }
 
   layout "instruction_only" {
-    default = true
+    default   = true
     reference = resource.layout.single_column
 
     instructions {
@@ -23,12 +32,12 @@ resource "lab" "demo" {
     reference = resource.layout.split_screen
 
     tab "code" {
-      panel = "code"
+      panel  = "code"
       target = resource.editor.workstation
     }
 
     tab "shell" {
-      panel = "terminal"
+      panel  = "terminal"
       target = resource.terminal.workstation
     }
 
@@ -42,7 +51,7 @@ resource "lab" "demo" {
 
     tab "lab" {
       active = true
-      panel = "instructions"
+      panel  = "instructions"
       target = resource.editor.workstation
     }
 
@@ -53,9 +62,9 @@ resource "lab" "demo" {
 
   content {
     chapter "introduction" {
-      title = "Introduction"
+      title       = "Introduction"
       layout_name = "instruction_only"
-      
+
       page "intro" {
         reference = resource.page.intro
       }
@@ -86,9 +95,9 @@ resource "lab" "demo" {
     }
 
     chapter "goals" {
-      title = "Goals"
+      title       = "Goals"
       layout_name = "instruction_only"
-      
+
       page "goals" {
         reference = resource.page.goals
       }
@@ -115,9 +124,9 @@ resource "lab" "demo" {
     }
 
     chapter "reimagined" {
-      title = "Reimagined"
+      title       = "Reimagined"
       layout_name = "instruction_only"
-      
+
       page "reimagined" {
         reference = resource.page.reimagined
       }
@@ -132,22 +141,22 @@ resource "lab" "demo" {
     }
 
     chapter "flow" {
-      title = "Flow"
+      title       = "Flow"
       layout_name = "split_screen"
-      
+
       page "new_flow" {
         reference = resource.page.new_flow
       }
 
       page "activities" {
-        reference = resource.page.activities  
+        reference = resource.page.activities
       }
     }
 
     chapter "behind_the_scenes" {
-      title = "Behind the Scenes"
+      title       = "Behind the Scenes"
       layout_name = "full_code"
-      
+
       page "feedback" {
         reference = resource.page.actionable_feedback
       }
