@@ -5,8 +5,4 @@
 #   --command "test -f /tmp/hello"
 
 # Make sure jq is there
-apk add -u jq
-
-IP=$(gcloud compute instances describe my-instance --zone europe-west1-b --format=json | jq -r .networkInterfaces[0].accessConfigs[0].natIP)
-
-ssh -i {{key}} {{user}}@${IP} -o StrictHostKeyChecking=no 'test -f /tmp/hello'
+ssh -i {{key}} -o StrictHostKeyChecking=no {{user}}@{{host}} 'test -f /tmp/hello'
