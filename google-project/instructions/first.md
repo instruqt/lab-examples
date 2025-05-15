@@ -6,20 +6,4 @@ Cognate with North Frisian foarste (“first”), Dutch voorste (“foremost, fi
 
 ![Diagram](/assets/diagram.png)
 
-Other cognates include Sanskrit पूर्व (pūrva, “first”) and Russian первый (pervyj)
-
-<instruqt-code-group>
-  <instruqt-code language="js" title="main.js">
-    cat /home/cloudsdk/key.json | base64 -d > /home/cloudsdk/key.json
-  </instruqt-code>
-  <instruqt-code language="go" title="main.go">
-    fmt.Println("Hello, World!")
-  </instruqt-code>
-    <instruqt-code language="java" title="main.java">
-    System.out.println("Hello, World!");
-    </instruqt-code>
-</instruqt-code-group>
-
-<instruqt-completion heading="Congratualtions!" finish-button-label="Take me home"></instruqt-completion>
-
-<instruqt-task id="exam"></instruqt-task>
+<instruqt-task id="remote"></instruqt-task>
