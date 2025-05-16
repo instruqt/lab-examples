@@ -8,6 +8,7 @@ resource "task" "deploy_pod" {
 
     environment = {
       KUBECONFIG = "/root/.kube/config"
+      PATH       = "/opt/bitnami/kubectl/bin/:$PATH"
     }
   }
 
