@@ -1,6 +1,5 @@
+// Create a terminal tab to the workstation container
 resource "terminal" "shell" {
-  title = "Terminal"
-
   target = resource.container.workstation
 
   shell             = "/bin/bash"

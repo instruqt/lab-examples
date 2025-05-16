@@ -3,5 +3,5 @@
 This labs contains a single node kubernetes cluster, with a terminal preconfigured to interact with it.
 
 ```run
-kubectl list nodes
+kubectl get nodes
 ```
