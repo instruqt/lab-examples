@@ -17,7 +17,7 @@ server   Ready    control-plane,master   85s   v1.31.1+k3s1
 <instruqt-task id="deploy_pod">
 Deploy a container to this cluster:
 
-```
+```run
 kubectl run nginx --image=nginx
 ```
 
