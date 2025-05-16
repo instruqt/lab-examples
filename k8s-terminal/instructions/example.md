@@ -14,10 +14,11 @@ NAME     STATUS   ROLES                  AGE   VERSION
 server   Ready    control-plane,master   85s   v1.31.1+k3s1
 ```
 
+<instruqt-task id="deploy_pod">
 Deploy a container to this cluster:
 
 ```
 kubectl run nginx --image=nginx
 ```
 
-<instruqt-task id="deploy_pod"></instruqt-task>
+</instruqt-task>

@@ -4,4 +4,8 @@ resource "page" "introduction" {
 
 resource "page" "example" {
   file = "instructions/example.md"
+
+  activities = {
+    deploy_pod = resource.task.deploy_pod
+  }
 }
