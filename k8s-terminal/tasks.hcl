@@ -5,6 +5,10 @@ resource "task" "deploy_pod" {
     parallel_exec {
       condition = true
     }
+
+    environment = {
+      KUBECONFIG = "/root/.kube/config"
+    }
   }
 
   condition "pod_deployed" {
