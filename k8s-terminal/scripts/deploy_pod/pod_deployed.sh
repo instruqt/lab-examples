@@ -2,8 +2,8 @@
 
 # debug
 env > /tmp/env.txt
-kubectl get pods > /tmp/pods.txt
-kubectl get pods | grep nginx > /tmp/pods_nginx.txt
+/opt/bitnami/kubectl/bin/kubectl get pods > /tmp/pods.txt
+/opt/bitnami/kubectl/bin/kubectl get pods | grep nginx > /tmp/pods_nginx.txt
 #end debug
 
-kubectl get pods | grep nginx
+/opt/bitnami/kubectl/bin/kubectl get pods | grep nginx

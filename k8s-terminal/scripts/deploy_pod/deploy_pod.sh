@@ -1,3 +1,3 @@
 #!/bin/bash
 
-kubectl run nginx --image=nginx
+/opt/bitnami/kubectl/bin/kubectl run nginx --image=nginx
