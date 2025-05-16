@@ -2,6 +2,14 @@ resource "lab" "k8s_single_node" {
   title       = "Single Node Kubernetes Cluster"
   description = "This is an example lab with a single node Kubernetes (k3s) cluster and a terminal tab."
 
+  layout "single_column" {
+    reference = resource.layout.single_column
+
+    instructions {
+      panel = "instructions"
+    }
+  }
+
   layout "two_column" {
     reference = resource.layout.two_column
 
@@ -21,11 +29,13 @@ resource "lab" "k8s_single_node" {
       title = "Example"
 
       page "introduction" {
-        reference = resource.page.introduction
+        reference   = resource.page.introduction
+        layout_name = "single_column"
       }
 
       page "example" {
-        reference = resource.page.example
+        reference   = resource.page.example
+        layout_name = "two_column"
       }
     }
   }
