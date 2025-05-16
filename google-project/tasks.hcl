@@ -24,6 +24,7 @@ resource "task" "remote" {
           host = resource.terraform.provision_resources.output.instance_ip
           key = resource.exec.generate_ssh_key.environment["file"]
         }
+        failure_exit_codes = [1]
       }
     }
   }
