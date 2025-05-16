@@ -16,7 +16,7 @@ resource "task" "remote" {
 
     check {
       script          = "scripts/file_exists.sh"
-      failure_message = "The file could not be found at /tmp/hello"
+      failure_message = "The file could not be found at /tmp/hello inside the VM"
 
       config {
         environment = {
