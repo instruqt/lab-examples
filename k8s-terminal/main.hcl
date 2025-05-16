@@ -36,7 +36,7 @@ resource "lab" "k8s_single_node" {
       }
 
       page "example" {
-        title       = "Interacting with the Kubernetes Cluster"
+        title       = "Interacting with the cluster"
         reference   = resource.page.example
         layout_name = "two_column"
       }
