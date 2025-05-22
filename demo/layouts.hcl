@@ -4,17 +4,17 @@ resource "layout" "single_column" {
 
 resource "layout" "split_screen" {
   column "sandbox" {
-    width = 67
+    width = "67"
 
     row "code" {
-      height = 67
+      height = "67"
     }
     row "terminal" {
-      height = 33
+      height = "33"
     }
   }
 
   column "instructions" {
-    width = 33
+    width = "33"
   }
 }

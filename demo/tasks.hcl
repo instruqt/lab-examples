@@ -12,7 +12,7 @@ resource "task" "first_task" {
     }
 
     solve {
-      script  = "scripts/first_task/solve.sh"
+      script = "scripts/first_task/solve.sh"
     }
   }
 
@@ -23,5 +23,9 @@ resource "task" "first_task" {
       script          = "scripts/first_task/contents_match.sh"
       failure_message = "The file does not contain the word 'world'"
     }
+  }
+  list = []
+  condition {
+    description = "The contents of the file contains the word 'world'"
   }
 }
