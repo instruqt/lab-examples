@@ -27,6 +27,7 @@ resource "lab" "task" {
       title = "Introduction"
       
       page "first" {
+        title = "First"
         reference = resource.page.first
       }
     }
