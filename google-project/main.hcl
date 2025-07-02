@@ -8,28 +8,11 @@ resource "lab" "google_project" {
     }
   }
 
-  layout "single_column" {
-    reference = resource.layout.single_column
-
-    tab "cli" {
-      panel = "terminal"
-      target = resource.terminal.cli
-    }
-
-    tab "vm" {
-      panel = "terminal"
-      target = resource.terminal.vm
-    }
-
-    instructions {
-      panel = "instructions"
-    }
-  }
+  layout = resource.layout.single_column
 
   content {
     chapter "first" {
       title = "First"
-      layout_name = "single_column"
 
       page "first" {
         reference = resource.page.first

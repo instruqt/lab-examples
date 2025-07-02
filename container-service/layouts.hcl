@@ -1,7 +1,12 @@
 resource "layout" "two_column" {
-  column "left" {}
+  column {
+    tab "nginx" {
+      target = resource.service.nginx
+    }
+  }
 
-  column "right" {
+  column {
     width = 33
+    instructions {}
   }
 }

@@ -8,14 +8,7 @@ resource "lab" "task" {
     }
   }
 
-  layout "single_column" {
-    default = true
-    reference = resource.layout.single_column
-
-    instructions {
-      panel = "instructions"
-    }
-  }
+  layout = resource.layout.single_column
 
   content {
     chapter "introduction" {

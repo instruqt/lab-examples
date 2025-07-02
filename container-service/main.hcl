@@ -8,19 +8,7 @@ resource "lab" "container_service" {
     }
   }
 
-  layout "two_column" {
-    default = true
-    reference  = resource.layout.two_column
-
-    tab "nginx" {
-      panel  = "left"
-      target = resource.service.nginx
-    }
-
-    instructions {
-      panel = "right"
-    }
-  }
+  layout = resource.layout.two_column
 
   content {
     chapter "introduction" {

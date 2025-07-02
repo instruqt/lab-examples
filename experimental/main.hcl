@@ -8,14 +8,7 @@ resource "lab" "container_service" {
     }
   }
 
-  layout "two_column" {
-    default = true
-    reference  = resource.layout.two_column
-
-    instructions {
-      panel = "right"
-    }
-  }
+  layout = resource.layout.two_column
 
   content {
     chapter "introduction" {
