@@ -40,11 +40,13 @@ resource "lab" "minimal" {
       layout_name = "minimal"
       
       page "first" {
+        title = "First"
         layout_name = "instructions_only"
         reference = resource.page.first
       }
 
       page "second" {
+        title = "Second"
         reference = resource.page.second
       }
     }
@@ -53,10 +55,12 @@ resource "lab" "minimal" {
       title = "Imported"
 
       page "first" {
+        title = "First"
         reference = module.chapter.output.pages.first
       }
 
       page "second" {
+        title = "Second"
         reference = module.chapter.output.pages.second
       }
     }

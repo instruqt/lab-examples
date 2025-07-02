@@ -32,6 +32,7 @@ resource "lab" "google_project" {
       layout_name = "single_column"
 
       page "first" {
+        title = "First"
         reference = resource.page.first
       }
     }
