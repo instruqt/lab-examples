@@ -1,30 +1,30 @@
 resource "page" "intro" {
-  title = "Intro"
+  title = "Introduction"
   file = "instructions/introduction/intro.md"
 }
 
 resource "page" "learning_curve" {
-  title = "Learning Curve"
+  title = "Steep Learning Curve"
   file = "instructions/introduction/learning_curve.md"
 }
 
 resource "page" "poor_feedback" {
-  title = "Poor Feedback"
+  title = "Slow Feedback and Limited Debuggability"
   file = "instructions/introduction/feedback.md"
 }
 
 resource "page" "dependencies" {
-  title = "Dependencies"
+  title = "Hidden Dependencies and Complexity"
   file = "instructions/introduction/dependencies.md"
 }
 
 resource "page" "constraints" {
-  title = "Constraints"
+  title = "Content Format Limitations"
   file = "instructions/introduction/constraints.md"
 }
 
 resource "page" "difficult_collaboration" {
-  title = "Difficult Collaboration"
+  title = "Difficult to Collaborate on, and Reuse Content"
   file = "instructions/introduction/collaboration.md"
 }
 
@@ -39,32 +39,32 @@ resource "page" "goals" {
 }
 
 resource "page" "lower_learning_curve" {
-  title = "Lower Learning Curve"
+  title = "Lowering the Learning Curve"
   file = "instructions/goals/lower_learning_curve.md"
 }
 
 resource "page" "fast_feedback" {
-  title = "Fast Feedback"
+  title = "Faster Feedback and Easier Debugging"
   file = "instructions/goals/fast_feedback.md"
 }
 
 resource "page" "explicitness" {
-  title = "Explicitness"
+  title = "Explicit Dependencies to Manage Complexity"
   file = "instructions/goals/explicitness.md"
 }
 
 resource "page" "flexibility" {
-  title = "Flexibility"
+  title = "More Flexibility in Content Flows"
   file = "instructions/goals/flexibility.md"
 }
 
 resource "page" "better_collaboration" {
-  title = "Better Collaboration"
+  title = "Easier Collaboration with Version Control"
   file = "instructions/goals/better_collaboration.md"
 }
 
 resource "page" "reimagined" {
-  title = "Reimagined"
+  title = "Rich content"
   file = "instructions/reimagined/reimagined.md"
 }
 
@@ -78,7 +78,7 @@ resource "page" "layouts" {
 }
 
 resource "page" "new_flow" {
-  title = "New Flow"
+  title = "Content Flow"
   file = "instructions/flow/new_flow.md"
 }
 
@@ -93,21 +93,21 @@ resource "page" "activities" {
 }
 
 resource "page" "actionable_feedback" {
-  title = "Actionable Feedback"
+  title = "Content Creator Feedback"
   file = "instructions/behind_the_scenes/feedback.md"
 }
 
 resource "page" "creator_ui" {
-  title = "Creator Ui"
+  title = "Content Creator UI"
   file = "instructions/behind_the_scenes/creator_ui.md"
 }
 
 resource "page" "modules" {
-  title = "Modules"
+  title = "Reusable and Shareable Modules"
   file = "instructions/behind_the_scenes/modules.md"
 }
 
 resource "page" "versioning" {
-  title = "Versioning"
+  title = "Native Version Control"
   file = "instructions/behind_the_scenes/versioning.md"
 }
