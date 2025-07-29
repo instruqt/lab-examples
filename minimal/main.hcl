@@ -12,36 +12,15 @@ resource "lab" "minimal" {
     }
   }
 
-  layout "minimal" {
-    default = true
-    reference = resource.layout.minimal
-
-    tab "terminal" {
-      panel = "terminal"
-      target = resource.terminal.shell
-    }
-
-    instructions {
-      panel = "instructions"
-    }
-  }
-
-  layout "instructions_only" {
-    reference = resource.layout.minimal
-
-    instructions {
-      panel = "instructions"
-    }
-  }
+  layout = resource.layout.minimal
 
   content {
     chapter "introduction" {
       title = "Introduction"
-      layout_name = "minimal"
       
       page "first" {
         title = "First"
-        layout_name = "instructions_only"
+        layout = resource.layout.instructions_only
         reference = resource.page.first
       }
 

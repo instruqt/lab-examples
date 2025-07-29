@@ -1,5 +1,5 @@
-resource "lab" "task" {
-  title = "Tasks"
+resource "lab" "quiz" {
+  title = "Quiz"
   description = "This is an example lab that shows how to add quizzes to your content."
 
   settings {
@@ -8,14 +8,7 @@ resource "lab" "task" {
     }
   }
 
-  layout "single_column" {
-    default = true
-    reference = resource.layout.single_column
-
-    instructions {
-      panel = "instructions"
-    }
-  }
+  layout = resource.layout.single_column
 
   content {
     chapter "introduction" {

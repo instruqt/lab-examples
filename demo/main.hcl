@@ -10,51 +10,11 @@ resource "lab" "demo" {
     }
   }
 
-  layout "instruction_only" {
-    default = true
-    reference = resource.layout.single_column
-
-    instructions {
-      panel = "instructions"
-    }
-  }
-
-  layout "split_screen" {
-    reference = resource.layout.split_screen
-
-    tab "code" {
-      panel = "code"
-      target = resource.editor.workstation
-    }
-
-    tab "shell" {
-      panel = "terminal"
-      target = resource.terminal.workstation
-    }
-
-    instructions {
-      panel = "instructions"
-    }
-  }
-
-  layout "full_code" {
-    reference = resource.layout.single_column
-
-    tab "lab" {
-      active = true
-      panel = "instructions"
-      target = resource.editor.workstation
-    }
-
-    instructions {
-      panel = "instructions"
-    }
-  }
+  layout = resource.layout.instruction_only
 
   content {
     chapter "introduction" {
       title = "Introduction"
-      layout_name = "instruction_only"
       
       page "intro" {
         title = "Intro"
@@ -94,7 +54,6 @@ resource "lab" "demo" {
 
     chapter "goals" {
       title = "Goals"
-      layout_name = "instruction_only"
       
       page "goals" {
         title = "Goals"
@@ -129,7 +88,6 @@ resource "lab" "demo" {
 
     chapter "reimagined" {
       title = "Reimagined"
-      layout_name = "instruction_only"
       
       page "reimagined" {
         title = "Reimagined"
@@ -149,7 +107,7 @@ resource "lab" "demo" {
 
     chapter "flow" {
       title = "Flow"
-      layout_name = "split_screen"
+      layout = resource.layout.split_screen
       
       page "new_flow" {
         title = "New Flow"
@@ -164,7 +122,7 @@ resource "lab" "demo" {
 
     chapter "behind_the_scenes" {
       title = "Behind the Scenes"
-      layout_name = "full_code"
+      layout = resource.layout.full_code
       
       page "feedback" {
         title = "Feedback"

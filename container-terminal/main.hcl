@@ -8,19 +8,7 @@ resource "lab" "container_terminal" {
     }
   }
 
-  layout "two_column" {
-    default = true
-    reference  = resource.layout.two_column
-
-    tab "terminal" {
-      panel  = "terminal"
-      target = resource.terminal.shell
-    }
-
-    instructions {
-      panel = "instructions"
-    }
-  }
+  layout = resource.layout.two_column
 
   content {
     chapter "introduction" {

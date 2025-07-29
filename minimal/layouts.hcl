@@ -1,5 +1,17 @@
 resource "layout" "minimal" {
-  column "terminal" {}
+  column {
+    tab "terminal" {
+      target = resource.terminal.shell
+    }
+  }
 
-  column "instructions" {}
+  column {
+    instructions {}
+  }
+}
+
+resource "layout" "instructions_only" {
+  column {
+    instructions {}
+  }
 }

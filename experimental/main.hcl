@@ -1,6 +1,6 @@
-resource "lab" "container_service" {
-  title       = "Container Service"
-  description = "This is an example lab with a single container sandbox and a service tab to display a web page hosted by the container."
+resource "lab" "experimental" {
+  title       = "Experimental"
+  description = "This is an experimental example lab."
 
   settings {
     idle {
@@ -8,14 +8,7 @@ resource "lab" "container_service" {
     }
   }
 
-  layout "two_column" {
-    default = true
-    reference  = resource.layout.two_column
-
-    instructions {
-      panel = "right"
-    }
-  }
+  layout = resource.layout.two_column
 
   content {
     chapter "introduction" {
