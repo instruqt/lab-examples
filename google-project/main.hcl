@@ -15,6 +15,7 @@ resource "lab" "google_project" {
       title = "First"
 
       page "first" {
+        title = "First"
         reference = resource.page.first
       }
     }

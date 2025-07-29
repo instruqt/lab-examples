@@ -1,4 +1,5 @@
 resource "task" "first_task" {
+  description = "task description"
   config {
     target = resource.container.workstation
   }

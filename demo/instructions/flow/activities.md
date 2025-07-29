@@ -11,7 +11,7 @@ Activities are a generalization of challenges and quizzes.
 
 ## Example task
 
-<instruqt-task id="exam">
+<instruqt-task id="first_task">
   Create a file called `hello` in the `/tmp` directory and write the contents `world` to the file.
 </instruqt-task>
 
