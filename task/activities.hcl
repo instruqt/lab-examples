@@ -1,4 +1,5 @@
 resource "task" "helloworld" {
+  description = "task description"
   config {
     target = resource.container.ubuntu
   }

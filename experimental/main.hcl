@@ -14,6 +14,7 @@ resource "lab" "experimental" {
       title = "Introduction"
 
       page "first" {
+        title = "First"
         reference = resource.page.first
       }
     }

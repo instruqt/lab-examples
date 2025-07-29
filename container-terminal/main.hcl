@@ -14,6 +14,7 @@ resource "lab" "container_terminal" {
       title = "Introduction"
 
       page "first" {
+        title = "First"
         reference = resource.page.first
       }
     }

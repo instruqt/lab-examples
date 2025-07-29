@@ -1,4 +1,5 @@
 resource "page" "first" {
+  title = "First"
   file = "instructions/first.md"
 
   activities = {
