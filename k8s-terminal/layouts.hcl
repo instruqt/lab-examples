@@ -13,7 +13,7 @@ resource "layout" "two_column" {
   }
 
   column {
-    width = "33%"
+    width = 33
     instructions {}
   }
 }
