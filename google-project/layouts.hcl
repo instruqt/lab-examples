@@ -1,5 +1,8 @@
 resource "layout" "single_column" {
   column {
+    instructions {}
+  }
+  column {
     tab "cli" {
       target = resource.terminal.cli
     }
@@ -7,7 +10,5 @@ resource "layout" "single_column" {
     tab "vm" {
       target = resource.terminal.vm
     }
-    
-    instructions {}
   }
 }
