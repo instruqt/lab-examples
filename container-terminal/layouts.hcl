@@ -1,7 +1,12 @@
 resource "layout" "two_column" {
-  column "terminal" {}
+  column {
+    tab "terminal" {
+      target = resource.terminal.shell
+    }
+  }
 
-  column "instructions" {
-    width = 33
+  column {
+    width = "33%"
+    instructions {}
   }
 }

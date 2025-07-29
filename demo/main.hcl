@@ -1,6 +1,7 @@
 resource "lab" "demo" {
   title = "Demo"
   description = file("description.md")
+  layout = resource.layout.instruction_only
 
   settings {
     idle {
@@ -10,51 +11,10 @@ resource "lab" "demo" {
     }
   }
 
-  layout "instruction_only" {
-    default = true
-    reference = resource.layout.single_column
-
-    instructions {
-      panel = "instructions"
-    }
-  }
-
-  layout "split_screen" {
-    reference = resource.layout.split_screen
-
-    tab "code" {
-      panel = "code"
-      target = resource.editor.workstation
-    }
-
-    tab "shell" {
-      panel = "terminal"
-      target = resource.terminal.workstation
-    }
-
-    instructions {
-      panel = "instructions"
-    }
-  }
-
-  layout "full_code" {
-    reference = resource.layout.single_column
-
-    tab "lab" {
-      active = true
-      panel = "instructions"
-      target = resource.editor.workstation
-    }
-
-    instructions {
-      panel = "instructions"
-    }
-  }
-
   content {
     chapter "introduction" {
       title = "Introduction"
-      layout_name = "instruction_only"
+      layout = resource.layout.instruction_only
       
       page "intro" {
         reference = resource.page.intro
@@ -87,7 +47,7 @@ resource "lab" "demo" {
 
     chapter "goals" {
       title = "Goals"
-      layout_name = "instruction_only"
+      layout = resource.layout.instruction_only
       
       page "goals" {
         reference = resource.page.goals
@@ -116,7 +76,7 @@ resource "lab" "demo" {
 
     chapter "reimagined" {
       title = "Reimagined"
-      layout_name = "instruction_only"
+      layout = resource.layout.instruction_only
       
       page "reimagined" {
         reference = resource.page.reimagined
@@ -133,7 +93,7 @@ resource "lab" "demo" {
 
     chapter "flow" {
       title = "Flow"
-      layout_name = "split_screen"
+      layout = resource.layout.split_screen
       
       page "new_flow" {
         reference = resource.page.new_flow
@@ -146,7 +106,7 @@ resource "lab" "demo" {
 
     chapter "behind_the_scenes" {
       title = "Behind the Scenes"
-      layout_name = "full_code"
+      layout = resource.layout.full_code
       
       page "feedback" {
         reference = resource.page.actionable_feedback

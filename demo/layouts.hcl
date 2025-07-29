@@ -1,20 +1,39 @@
-resource "layout" "single_column" {
-  column "instructions" {}
+resource "layout" "instruction_only" {
+  column {
+    instructions {}
+  }
 }
 
 resource "layout" "split_screen" {
-  column "sandbox" {
-    width = 67
+  column {
+    width = "67%"
 
-    row "code" {
-      height = 67
+    row {
+      height = "67%"
+      tab "code" {
+        target = resource.editor.workstation
+      }
     }
-    row "terminal" {
-      height = 33
+    row {
+      height = "33%"
+      tab "shell" {
+        target = resource.terminal.workstation
+      }
     }
   }
 
-  column "instructions" {
-    width = 33
+  column {
+    width = "33%"
+    instructions {}
+  }
+}
+
+resource "layout" "full_code" {
+  column {
+    tab "lab" {
+      target = resource.editor.workstation
+      active = true
+    }
+    instructions {}
   }
 }

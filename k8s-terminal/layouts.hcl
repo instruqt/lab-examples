@@ -1,11 +1,19 @@
 resource "layout" "single_column" {
-  column "instructions" {}
+  column {
+    instructions {}
+  }
 }
 
 resource "layout" "two_column" {
-  column "terminal" {}
+  column {
+    tab "terminal" {
+      title = "Terminal"
+      target = resource.terminal.shell
+    }
+  }
 
-  column "instructions" {
-    width = 33
+  column {
+    width = "33%"
+    instructions {}
   }
 }

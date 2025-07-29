@@ -1,24 +1,11 @@
 resource "lab" "task" {
   title = "Tasks"
   description = "This is an example lab that shows how to add tasks to your content."
+  layout = resource.layout.two_column
 
   settings {
     idle {
       enabled = false
-    }
-  }
-
-  layout "two_column" {
-    default = true
-    reference = resource.layout.two_column
-
-    tab "terminal" {
-      panel = "terminal"
-      target = resource.terminal.shell
-    }
-
-    instructions {
-      panel = "instructions"
     }
   }
 

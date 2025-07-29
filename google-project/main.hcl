@@ -1,6 +1,7 @@
 resource "lab" "google_project" {
   title = "Google Cloud Project"
   description = "How to chain cloud accounts and other resources together"
+  layout = resource.layout.single_column
 
   settings {
     idle {
@@ -8,28 +9,10 @@ resource "lab" "google_project" {
     }
   }
 
-  layout "single_column" {
-    reference = resource.layout.single_column
-
-    tab "cli" {
-      panel = "terminal"
-      target = resource.terminal.cli
-    }
-
-    tab "vm" {
-      panel = "terminal"
-      target = resource.terminal.vm
-    }
-
-    instructions {
-      panel = "instructions"
-    }
-  }
-
   content {
     chapter "first" {
       title = "First"
-      layout_name = "single_column"
+      layout = resource.layout.single_column
 
       page "first" {
         reference = resource.page.first

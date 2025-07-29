@@ -1,24 +1,11 @@
 resource "lab" "container_terminal" {
   title       = "Container Terminal"
   description = "This is an example lab with a single container sandbox and a terminal tab."
+  layout      = resource.layout.two_column
 
   settings {
     idle {
       enabled = false
-    }
-  }
-
-  layout "two_column" {
-    default = true
-    reference  = resource.layout.two_column
-
-    tab "terminal" {
-      panel  = "terminal"
-      target = resource.terminal.shell
-    }
-
-    instructions {
-      panel = "instructions"
     }
   }
 
