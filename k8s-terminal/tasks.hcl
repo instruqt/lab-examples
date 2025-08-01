@@ -1,4 +1,6 @@
 resource "task" "deploy_pod" {
+  description = "Deploy a pod to the Kubernetes cluster"
+  
   config {
     target = resource.container.workstation
 
