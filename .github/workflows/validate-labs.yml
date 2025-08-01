@@ -1,0 +1,43 @@
+name: Validate Lab Examples
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  discover-labs:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Discover lab directories
+        id: set-matrix
+        run: |
+          # List directories (excluding .github)
+          labs=$(ls -d */ | sed 's|/||' | grep -v '.github' | jq -R -s -c 'split("\n")[:-1]')
+          echo "matrix=$labs" >> $GITHUB_OUTPUT
+          echo "Discovered labs: $labs"
+
+  validate:
+    runs-on: ubuntu-latest
+    needs: discover-labs
+    strategy:
+      matrix:
+        lab: ${{ fromJson(needs.discover-labs.outputs.matrix) }}
+      fail-fast: false  # Continue validating other labs even if one fails
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Setup Instruqt CLI
+        uses: instruqt/cli/setup@v1
+      
+      - name: Validate ${{ matrix.lab }} lab
+        uses: instruqt/cli/validate@v1
+        with:
+          path: ./${{ matrix.lab }}
