@@ -1,0 +1,39 @@
+name: Validate Lab Examples
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        lab:
+          - container-service
+          - container-terminal
+          - demo
+          - experimental
+          - google-project
+          - k8s-terminal
+          - local
+          - minimal
+          - quiz
+          - skeleton
+          - task
+      fail-fast: false  # Continue validating other labs even if one fails
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Setup Instruqt CLI
+        uses: instruqt/cli/setup@v1
+      
+      - name: Validate ${{ matrix.lab }} lab
+        uses: instruqt/cli/validate@v1
+        with:
+          path: ./${{ matrix.lab }}
