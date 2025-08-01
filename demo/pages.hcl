@@ -87,7 +87,7 @@ resource "page" "activities" {
   file = "instructions/flow/activities.md"
 
   activities = {
-    "exam" = resource.task.first_task
+    "first_task" = resource.task.first_task
     "quizzes" = resource.quiz.quizzes
   }
 }

@@ -1,6 +1,4 @@
 resource "terminal" "shell" {
-  title = "Terminal"
-
   target = resource.container.ubuntu
   
   shell = "/bin/bash"
@@ -8,8 +6,6 @@ resource "terminal" "shell" {
 }
 
 resource "terminal" "shell2" {
-  title = "Vault terminal"
-
   target = resource.container.ubuntu
   shell = "/bin/sh"
   user = "root"
@@ -21,8 +17,6 @@ resource "terminal" "shell2" {
 }
 
 resource "service" "vault_ui" {
-  title = "Vault UI"
-
   target = resource.container.ubuntu
   scheme = "http"
   port = 8200
@@ -30,8 +24,6 @@ resource "service" "vault_ui" {
 }
 
 resource "editor" "code" {
-  title = "Visual Studio Code"
-
   extensions = [
     "golang.go",
     "sdras.night-owl"
@@ -51,8 +43,6 @@ resource "editor" "code" {
 }
 
 resource "note" "addendum" {
-  title = "Addendum"
-  
   file = "notes/addendum.md"
   variables = {
     version = "0.12"
@@ -60,22 +50,16 @@ resource "note" "addendum" {
 }
 
 resource "external_website" "iframe_same_window" {
-  title = "Iframe website"
-
   url = "https://docs.instruqt.com"
 }
 
 resource "external_website" "iframe_new_window" {
-  title = "Iframe website"
-
   url = "https://docs.instruqt.com"
 
   open_in_new_window = true
 }
 
 resource "virtual_browser" "virtual" {
-  title = "Virtual browser website"
-
   url = "https://docs.instruqt.com"
   
   agent = "firefox"

@@ -1,4 +1,6 @@
 resource "task" "remote" {
+  description = "Create a file on the remote Google Cloud VM"
+  
   config {
     target = resource.container.google_cloud_cli
 
