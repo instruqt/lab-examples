@@ -19,7 +19,6 @@ jobs:
           - experimental
           - google-project
           - k8s-terminal
-          - local
           - minimal
           - quiz
           - skeleton
