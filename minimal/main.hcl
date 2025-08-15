@@ -35,12 +35,12 @@ resource "lab" "minimal" {
 
       page "first" {
         title = "First"
-        reference = module.chapter.output.pages.first
+        reference = module.chapter.pages.first
       }
 
       page "second" {
         title = "Second"
-        reference = module.chapter.output.pages.second
+        reference = module.chapter.pages.second
       }
     }
   }
