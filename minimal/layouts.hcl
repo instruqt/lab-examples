@@ -1,7 +1,11 @@
 resource "layout" "minimal" {
   column {
     tab "terminal" {
-      target = resource.terminal.shell
+      target = resource.editor.workstation
+    }
+    width = "53"
+    tab "instructions" {
+      target = resource.editor.workstation
     }
   }
 

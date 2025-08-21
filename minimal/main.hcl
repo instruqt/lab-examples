@@ -3,7 +3,7 @@ module "chapter" {
 }
 
 resource "lab" "minimal" {
-  title = "Minimal"
+  title       = "Minimal"
   description = "This is a minimal example lab."
 
   settings {
@@ -17,15 +17,15 @@ resource "lab" "minimal" {
   content {
     chapter "introduction" {
       title = "Introduction"
-      
+
       page "first" {
-        title = "First"
-        layout = resource.layout.instructions_only
+        title     = "First"
+        layout    = resource.layout.instructions_only
         reference = resource.page.first
       }
 
       page "second" {
-        title = "Second"
+        title     = "Second"
         reference = resource.page.second
       }
     }
@@ -34,12 +34,12 @@ resource "lab" "minimal" {
       title = "Imported"
 
       page "first" {
-        title = "First"
+        title     = "First"
         reference = module.chapter.output.pages.first
       }
 
       page "second" {
-        title = "Second"
+        title     = "Second"
         reference = module.chapter.output.pages.second
       }
     }

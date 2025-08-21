@@ -1,11 +1,11 @@
 resource "virtual_browser" "browser" {
-  url = "https://www.instruqt.com.com"
+  url   = "https://www.instruqt.com.com"
   agent = "chromium"
 }
 
 resource "task" "browser" {
   description = "Navigate to the Instruqt website"
-  
+
   config {
     target = resource.virtual_browser.browser
   }
@@ -19,7 +19,7 @@ resource "task" "browser" {
     }
 
     solve {
-      script  = "scripts/browser/solve.js"
+      script = "scripts/browser/solve.js"
     }
   }
 }

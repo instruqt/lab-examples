@@ -1,5 +1,5 @@
 resource "network" "main" {
-	subnet = "10.0.5.0/24"
+  subnet = "10.0.5.0/24"
 }
 
 resource "container" "ubuntu" {
@@ -9,7 +9,7 @@ resource "container" "ubuntu" {
 
   command = ["tail", "-f", "/dev/null"]
 
-	network {
-		id = resource.network.main.meta.id
-	}
+  network {
+    id = resource.network.main.meta.id
+  }
 }

@@ -1,17 +1,17 @@
 resource "terminal" "shell" {
   target = resource.container.ubuntu
-  
-  shell = "/bin/bash"
+
+  shell             = "/bin/bash"
   working_directory = "/root"
 }
 
 resource "terminal" "shell2" {
-  target = resource.container.ubuntu
-  shell = "/bin/sh"
-  user = "root"
-  group = "root"
-  prompt = "%%{%f%b%k%}$(build_prompt)"
-  theme = "dracula"
+  target            = resource.container.ubuntu
+  shell             = "/bin/sh"
+  user              = "root"
+  group             = "root"
+  prompt            = "%%{%f%b%k%}$(build_prompt)"
+  theme             = "dracula"
   working_directory = "/root"
   #command = ["watch", "-n", "1", "ls -lha"]
 }
@@ -19,8 +19,8 @@ resource "terminal" "shell2" {
 resource "service" "vault_ui" {
   target = resource.container.ubuntu
   scheme = "http"
-  port = 8200
-  path = "/ui"
+  port   = 8200
+  path   = "/ui"
 }
 
 resource "editor" "code" {
@@ -29,15 +29,15 @@ resource "editor" "code" {
     "sdras.night-owl"
   ]
 
-  theme = "Night Owl (No Italics)"
+  theme    = "Night Owl (No Italics)"
   settings = file("files/settings.json")
-  
+
   workspace "assets" {
     directory = "files"
   }
 
   workspace "vault_config" {
-    target = resource.container.ubuntu
+    target    = resource.container.ubuntu
     directory = "/etc/vault.d"
   }
 }
@@ -45,7 +45,7 @@ resource "editor" "code" {
 resource "note" "addendum" {
   file = "notes/addendum.md"
   variables = {
-    version = "0.12"
+    "version" = "0.12"
   }
 }
 
@@ -61,6 +61,6 @@ resource "external_website" "iframe_new_window" {
 
 resource "virtual_browser" "virtual" {
   url = "https://docs.instruqt.com"
-  
+
   agent = "firefox"
 }

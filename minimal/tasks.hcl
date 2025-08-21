@@ -1,12 +1,12 @@
 resource "task" "first_task" {
   description = "task description"
   config {
-      target = resource.container.ubuntu
-      
-      parallel_exec {
-        condition = true
-      }
+    target = resource.container.ubuntu
+
+    parallel_exec {
+      condition = true
     }
+  }
 
   condition "file_exists" {
     description = "The file exists"
@@ -21,7 +21,7 @@ resource "task" "first_task" {
     }
 
     solve {
-      script  = "scripts/first_task/solve.sh"
+      script = "scripts/first_task/solve.sh"
     }
   }
 
