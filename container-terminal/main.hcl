@@ -15,9 +15,12 @@ resource "lab" "container_terminal" {
       title = "Introduction"
 
       page "first" {
-        title = "First"
+        title     = "First"
         reference = resource.page.first
       }
+    }
+    chapter "untitled-chapter-1" {
+      title = "Untitled chapter 1"
     }
   }
 }
