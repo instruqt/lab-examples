@@ -3,6 +3,9 @@ resource "layout" "two_column" {
     tab "terminal" {
       target = resource.terminal.shell
     }
+    width = "33"
+    instructions {
+    }
   }
 
   column {
