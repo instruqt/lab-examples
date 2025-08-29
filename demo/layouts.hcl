@@ -6,12 +6,15 @@ resource "layout" "single_column" {
 
 resource "layout" "split_screen" {
   column {
-    width = 67
+    width = "33"
 
     row {
-      height = 67
+      height = "33"
       tab "code" {
         target = resource.editor.workstation
+      }
+      tab "shell" {
+        target = resource.terminal.workstation
       }
     }
     row {
@@ -19,6 +22,8 @@ resource "layout" "split_screen" {
       tab "shell" {
         target = resource.terminal.workstation
       }
+    }
+    instructions {
     }
   }
 
@@ -40,7 +45,7 @@ resource "layout" "full_code" {
       active = true
       target = resource.editor.workstation
     }
-    
+
     instructions {}
   }
 }
