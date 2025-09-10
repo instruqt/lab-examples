@@ -1,0 +1,3 @@
+resource "quiz" "orphan" {
+  questions = []
+}

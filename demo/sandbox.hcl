@@ -1,14 +1,14 @@
 resource "network" "main" {
-	subnet = "10.0.5.0/24"
+  subnet = "10.0.5.0/24"
 }
 
 resource "copy" "lab" {
-  source = "github.com/instruqt/lab-examples//demo"
+  source      = "github.com/instruqt/lab-examples//demo"
   destination = data("lab")
 }
 
 resource "copy" "track" {
-  source = "github.com/instruqt/templates//instruqt-tracks/kubernetes"
+  source      = "github.com/instruqt/templates//instruqt-tracks/kubernetes"
   destination = data("track")
 }
 
@@ -18,21 +18,21 @@ resource "container" "workstation" {
   }
 
   resources {
-    memory = "512"
+    memory = 0
   }
 
   command = ["tail", "-f", "/dev/null"]
 
-	network {
-		id = resource.network.main.meta.id
-	}
+  network {
+    id = resource.network.main.meta.id
+  }
 
   volume {
-    source = resource.copy.lab.destination
-    destination = "/root/lab"
+    source      = "resource.copy.track.destination"
+    destination = "/root/track"
   }
   volume {
-    source = resource.copy.track.destination
+    source      = resource.copy.track.destination
     destination = "/root/track"
   }
 }

@@ -13,7 +13,7 @@ resource "task" "first_task" {
     }
 
     solve {
-      script  = "scripts/first_task/solve.sh"
+      script = "scripts/first_task/solve.sh"
     }
   }
 
