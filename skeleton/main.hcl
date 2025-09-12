@@ -6,6 +6,10 @@ resource "lab" "main" {
   content {
     chapter "chapter-a" {
       title = "Chapter A"
+      page "page-a1" {
+        title     = "Page A1"
+        reference = resource.page.page-a1
+      }
     }
   }
 }
