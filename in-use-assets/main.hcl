@@ -1,4 +1,4 @@
-resource "lab" "demo" {
+resource "lab" "in-use-assets" {
   title       = "In Use Assets"
   description = "Check our [read-me](./assets/README.md) manifest *alstublieft*"
   layout      = resource.layout.simple
