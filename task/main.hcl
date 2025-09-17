@@ -1,5 +1,5 @@
 resource "lab" "task" {
-  title = "Tasks"
+  title       = "Tasks"
   description = "This is an example lab that shows how to add tasks to your content."
 
   settings {
@@ -13,11 +13,11 @@ resource "lab" "task" {
   content {
     chapter "introduction" {
       title = "Introduction"
-      
+
       page "first" {
-        title = "First"
+        title     = "First"
         reference = resource.page.first
       }
     }
   }
-}   
+}
