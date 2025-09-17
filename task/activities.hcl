@@ -8,7 +8,7 @@ resource "task" "helloworld" {
     description = "The file `/tmp/hello` should exist"
 
     check {
-      script = "scripts/helloworld/file_exists.sh"
+      script          = "scripts/helloworld/file_exists.sh"
       failure_message = "The file `/tmp/hello` does not exist"
     }
   }
@@ -17,7 +17,7 @@ resource "task" "helloworld" {
     description = "The file should contain the text `world`"
 
     check {
-      script = "scripts/helloworld/contents_match.sh"
+      script          = "scripts/helloworld/contents_match.sh"
       failure_message = "The file `/tmp/hello` does not contain the text `world`"
     }
   }
