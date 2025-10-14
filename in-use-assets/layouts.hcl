@@ -10,3 +10,6 @@ resource "layout" "simple" {
     }
   }
 }
+
+resource "layout" "layout_1" {
+}
