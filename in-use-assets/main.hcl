@@ -17,6 +17,10 @@ resource "lab" "in-use-assets" {
         reference = resource.page.image
         layout    = resource.layout.layout_1
       }
+      page "untitled-page-1" {
+        title     = "Untitled page 1"
+        reference = resource.page.untitled-page-1
+      }
     }
   }
 }
