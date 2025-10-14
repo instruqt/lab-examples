@@ -10,6 +10,7 @@ resource "lab" "in-use-assets" {
       page "introduction" {
         title     = "Introduction"
         reference = resource.page.introduction
+        layout    = resource.layout.simple
       }
 
       page "image" {
