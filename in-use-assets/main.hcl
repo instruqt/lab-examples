@@ -15,6 +15,7 @@ resource "lab" "in-use-assets" {
       page "image" {
         title     = "Image"
         reference = resource.page.image
+        layout    = resource.layout.layout_1
       }
     }
   }
