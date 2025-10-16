@@ -1,6 +1,6 @@
 resource "lab" "demo" {
   title = "Demo"
-  description = file("description.md")
+  description = "This is a demo example lab."
 
   settings {
     idle {
