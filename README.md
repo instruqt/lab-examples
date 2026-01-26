@@ -6,17 +6,17 @@ This repository showcases examples of labs built with Instruqt's new HCL definit
 
 | Lab | Description | Key Features |
 | --- | --- | --- |
-| [container-terminal](container-terminal) | Basic Ubuntu container with interactive terminal | Simple container setup, terminal tab |
 | [container-service](container-service) | Nginx container with web service tab | Web service integration, port mapping |
-| [task](task) | Demonstrates tasks and validation conditions | Task validation, check/solve scripts |
-| [quiz](quiz) | Shows different quiz types | Single/multiple choice, hints |
+| [container-terminal](container-terminal) | Basic Ubuntu container with interactive terminal | Simple container setup, terminal tab |
 | [demo](demo) | Comprehensive showcase of advanced features | Multiple resources, complex validation |
-| [minimal](minimal) | Single container with multiple content options and modules | Module system, content organization |
-| [k8s-terminal](k8s-terminal) | Kubernetes cluster with pod deployment tasks | K8s integration, cluster management |
-| [google-project](google-project) | Google Cloud integration with Terraform | Cloud provider, service accounts |
 | [experimental](experimental) | Basic experimental features lab | Testing new capabilities |
+| [google-project](google-project) | Google Cloud integration with Terraform | Cloud provider, service accounts |
+| [in-use-assets](in-use-assets) | Test the `used in X places` assets badge | Assets feature |
+| [k8s-terminal](k8s-terminal) | Kubernetes cluster with pod deployment tasks | K8s integration, cluster management |
+| [minimal](minimal) | Single container with multiple content options and modules | Module system, content organization |
+| [quiz](quiz) | Shows different quiz types | Single/multiple choice, hints |
 | [skeleton](skeleton) | Minimal template for starting new labs | Best practices template |
-| [local](local) | Simple local environment example | Basic setup reference |
+| [task](task) | Demonstrates tasks and validation conditions | Task validation, check/solve scripts |
 
 
 ## Typical Lab Structure
