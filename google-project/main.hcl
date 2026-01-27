@@ -1,5 +1,5 @@
 resource "lab" "google_project" {
-  title = "Google Cloud Project"
+  title       = "Google Cloud Project"
   description = "How to chain cloud accounts and other resources together"
 
   settings {
@@ -15,7 +15,7 @@ resource "lab" "google_project" {
       title = "First"
 
       page "first" {
-        title = "First"
+        title     = "First"
         reference = resource.page.first
       }
     }

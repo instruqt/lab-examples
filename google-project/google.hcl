@@ -12,7 +12,7 @@ resource "google_project" "my_project" {
 }
 
 resource "template" "google_cloud_key" {
-  source = resource.google_project.my_project.service_account.0.key
+  source      = resource.google_project.my_project.service_account.0.key
   destination = "${data("google")}/key.json"
 }
 
@@ -36,7 +36,7 @@ resource "terraform" "provision_resources" {
 }
 
 resource "template" "google_cloud_config" {
-  source = <<-EOF
+  source      = <<-EOF
   [auth]
   credential_file_override = /home/cloudsdk/key.json
 
@@ -58,12 +58,12 @@ resource "container" "google_cloud_cli" {
   }
 
   volume {
-    source = resource.template.google_cloud_config.destination
+    source      = "resource.template.google_cloud_config.destination"
     destination = "/root/.config/gcloud/configurations/config_default"
   }
 
   volume {
-    source = resource.template.google_cloud_key.destination
+    source      = "resource.template.google_cloud_key.destination"
     destination = "/home/cloudsdk/key.json"
   }
 }
@@ -78,8 +78,8 @@ resource "exec" "generate_ssh_key" {
   EOF
 
   environment = {
-    "type" =  "ed25519"
-    "file" = "/root/.ssh/id_ed25519"
+    "type"    = "ed25519"
+    "file"    = "/root/.ssh/id_ed25519"
     "comment" = resource.google_project.my_project.service_account.0.email
   }
 }

@@ -1,6 +1,6 @@
 resource "task" "remote" {
   description = "Create a file on the remote Google Cloud VM"
-  
+
   config {
     target = resource.container.google_cloud_cli
 
@@ -22,9 +22,9 @@ resource "task" "remote" {
 
       config {
         environment = {
-          user = resource.google_project.my_project.service_account.0.name
-          host = resource.terraform.provision_resources.output.instance_ip
-          key = resource.exec.generate_ssh_key.environment["file"]
+          "user" = "resource.google_project.my_project.service_account.name"
+          "host" = "resource.terraform.provision_resources.output.instance_ip"
+          "key"  = "resource.exec.generate_ssh_key.environment"
         }
         failure_exit_codes = [1]
       }
