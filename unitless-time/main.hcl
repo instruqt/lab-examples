@@ -5,12 +5,12 @@ resource "lab" "in-use-assets" {
 
   settings {
     timelimit {
-      duration = 30m
-      extend   = 15m
+      duration = "30m"
+      extend   = "15m"
     }
 
     idle {
-      timeout = 10m
+      timeout = "10m"
     }
   }
 
