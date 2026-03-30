@@ -71,11 +71,7 @@ resource "container" "google_cloud_cli" {
 resource "exec" "generate_ssh_key" {
   target = resource.container.google_cloud_cli
 
-  script = <<-EOF
-  ssh-keygen -t "$${type}" -f "$${file}" -C "$${comment}" -N ""
-
-  chmod 0600 /root/.ssh/*
-  EOF
+  script = "scripts/generate_ssh_key.sh"
 
   environment = {
     "type" =  "ed25519"
