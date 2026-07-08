@@ -1,5 +1,5 @@
-#!/bin/bash
-set -euo pipefail
+#!/bin/sh
+set -eu
 
 # Proves the whole discovery chain: workstation resolves "data-a1" by plain
 # hostname over the Lab's private network (same as the real track's
