@@ -1,5 +1,5 @@
-#!/bin/bash
-set -euxo pipefail
+#!/bin/sh
+set -eux
 export DEBIAN_FRONTEND=noninteractive
 
 apt-get update -qq
@@ -25,6 +25,5 @@ json.dump({'ssh_pubkey': pubkey}, open('/srv/topology/topology.json', 'w'))
 "
 
 nohup python3 -m http.server 8081 --directory /srv/topology > /var/log/topology-broker.log 2>&1 &
-disown
 
 echo "workstation bootstrap complete"
