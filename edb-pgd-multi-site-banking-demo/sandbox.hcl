@@ -21,8 +21,8 @@ resource "vm" "data-a1" {
   }
 
   resources {
-    cpu    = 1
-    memory = 1024
+    cpu    = 2
+    memory = 2048
   }
 
   network {
