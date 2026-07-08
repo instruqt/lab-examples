@@ -2,6 +2,13 @@
 set -euxo pipefail
 export DEBIAN_FRONTEND=noninteractive
 
+# Fresh Ubuntu cloud images run apt-daily/apt-daily-upgrade timers at boot
+# that grab the dpkg lock; stop them so our apt-get doesn't block on it.
+systemctl stop apt-daily.timer apt-daily-upgrade.timer >/dev/null 2>&1 || true
+systemctl kill --kill-who=all apt-daily.service >/dev/null 2>&1 || true
+systemctl kill --kill-who=all apt-daily-upgrade.service >/dev/null 2>&1 || true
+while fuser /var/lib/dpkg/lock-frontend >/dev/null 2>&1; do sleep 1; done
+
 apt-get update -qq
 apt-get install -y -qq openssh-server python3 >/dev/null
 systemctl enable --now ssh
