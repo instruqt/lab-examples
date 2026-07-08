@@ -14,8 +14,19 @@ resource "container" "workstation" {
   }
 }
 
-# one of the real track's 7 PGD cluster VMs (data-a1)
+# topology broker
+resource "exec" "workstation_bootstrap" {
+  target  = resource.container.workstation
+  script  = "scripts/exec/workstation_bootstrap/script.sh"
+  timeout = "60s"
+}
+
+# one of the real track's 7 PGD cluster VMs (data-a1). Depends on the
+# topology broker so it isn't already polling before workstation is
+# actually serving the pubkey.
 resource "vm" "data-a1" {
+  depends_on = ["resource.exec.workstation_bootstrap"]
+
   image {
     name = "ubuntu:24.04"
   }
@@ -30,11 +41,4 @@ resource "vm" "data-a1" {
   }
 
   startup_script = file("scripts/vm/data-a1/startup.sh")
-}
-
-# topology broker
-resource "exec" "workstation_bootstrap" {
-  target  = resource.container.workstation
-  script  = "scripts/exec/workstation_bootstrap/script.sh"
-  timeout = "60s"
 }
