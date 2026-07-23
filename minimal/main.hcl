@@ -12,7 +12,7 @@ resource "lab" "minimal" {
     }
 
     idle {
-      enabled = false
+      enabled = true
       timeout = "15m"
     }
   }

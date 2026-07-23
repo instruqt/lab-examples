@@ -8,7 +8,7 @@ resource "lab" "edb_pgd_multi_site_banking_demo" {
     }
 
     idle {
-      enabled = false
+      enabled = true
       timeout = "15m"
     }
   }

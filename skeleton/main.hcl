@@ -8,6 +8,7 @@ resource "lab" "main" {
     }
 
     idle {
+      enabled = true
       timeout = "15m"
     }
   }

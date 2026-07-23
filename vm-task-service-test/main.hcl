@@ -8,7 +8,7 @@ resource "lab" "vm_task_service_test" {
     }
 
     idle {
-      enabled = false
+      enabled = true
       timeout = "15m"
     }
   }

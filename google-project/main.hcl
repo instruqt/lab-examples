@@ -8,7 +8,7 @@ resource "lab" "google_project" {
     }
 
     idle {
-      enabled = false
+      enabled = true
       timeout = "15m"
     }
   }
