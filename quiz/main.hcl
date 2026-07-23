@@ -3,8 +3,13 @@ resource "lab" "quiz" {
   description = "This is an example lab that shows how to add quizzes to your content."
 
   settings {
+    timelimit {
+      duration = "1h"
+    }
+
     idle {
       enabled = false
+      timeout = "15m"
     }
   }
 

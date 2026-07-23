@@ -2,6 +2,16 @@ resource "lab" "k8s_single_node" {
   title       = "Single Node Kubernetes Cluster"
   description = "This is an example lab with a single node Kubernetes (k3s) cluster and a terminal tab."
 
+  settings {
+    timelimit {
+      duration = "1h"
+    }
+
+    idle {
+      timeout = "15m"
+    }
+  }
+
   layout = resource.layout.two_column
 
   content {

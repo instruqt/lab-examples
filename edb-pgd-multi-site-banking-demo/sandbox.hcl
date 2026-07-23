@@ -9,6 +9,11 @@ resource "container" "workstation" {
 
   command = ["sleep", "infinity"]
 
+  resources {
+    cpu    = 500
+    memory = 512
+  }
+
   network {
     id = resource.network.main.meta.id
   }

@@ -7,6 +7,11 @@ resource "container" "ubuntu" {
     name = "ubuntu"
   }
 
+  resources {
+    cpu    = 250
+    memory = 256
+  }
+
   network {
     id = resource.network.main.meta.id
   }

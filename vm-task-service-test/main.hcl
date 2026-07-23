@@ -3,8 +3,13 @@ resource "lab" "vm_task_service_test" {
   description = "Throwaway scratch lab to verify that task conditions and service tabs can target a vm resource directly, and that exec output can flow into page variables — the pattern the coder-agents-ai-governance V1 track migration depends on."
 
   settings {
+    timelimit {
+      duration = "1h"
+    }
+
     idle {
       enabled = false
+      timeout = "15m"
     }
   }
 

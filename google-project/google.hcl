@@ -66,6 +66,11 @@ resource "container" "google_cloud_cli" {
     source = resource.template.google_cloud_key.destination
     destination = "/home/cloudsdk/key.json"
   }
+
+  resources {
+    cpu    = 500
+    memory = 512
+  }
 }
 
 resource "exec" "generate_ssh_key" {

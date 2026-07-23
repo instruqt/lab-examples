@@ -7,6 +7,11 @@ resource "kubernetes_cluster" "k3s" {
   network {
     id = resource.network.main.meta.id
   }
+
+  resources {
+    cpu    = 2000
+    memory = 2048
+  }
 }
 
 // This container is used as an interactive terminal to the Kubernetes cluster.
@@ -20,6 +25,11 @@ resource "container" "workstation" {
   // Override the default entrypoint to use bash instead of kubectl,
   // so the container does not exit immediately.
   entrypoint = ["/bin/bash"]
+
+  resources {
+    cpu    = 250
+    memory = 256
+  }
 
   network {
     id = resource.network.main.meta.id

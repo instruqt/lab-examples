@@ -7,8 +7,13 @@ resource "lab" "minimal" {
   description = "This is a minimal example lab."
 
   settings {
+    timelimit {
+      duration = "1h"
+    }
+
     idle {
       enabled = false
+      timeout = "15m"
     }
   }
 

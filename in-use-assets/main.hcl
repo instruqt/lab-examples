@@ -1,6 +1,17 @@
 resource "lab" "in-use-assets" {
   title       = "In Use Assets"
   description = "Check our [read-me](./assets/README.md) manifest *alstublieft*"
+
+  settings {
+    timelimit {
+      duration = "1h"
+    }
+
+    idle {
+      timeout = "15m"
+    }
+  }
+
   layout      = resource.layout.simple
 
   content {

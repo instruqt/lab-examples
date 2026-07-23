@@ -18,7 +18,8 @@ resource "container" "workstation" {
   }
 
   resources {
-    memory = "512"
+    cpu    = 500
+    memory = 512
   }
 
   command = ["tail", "-f", "/dev/null"]

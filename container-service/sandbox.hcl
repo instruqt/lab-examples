@@ -12,6 +12,11 @@ resource "container" "nginx" {
     host  = 80
   }
 
+  resources {
+    cpu    = 250
+    memory = 256
+  }
+
   network {
     id = resource.network.main.meta.id
   }

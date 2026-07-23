@@ -3,8 +3,13 @@ resource "lab" "edb_pgd_multi_site_banking_demo" {
   description = "Live demo of EDB Postgres Distributed running a multi-site banking workload — zero-downtime maintenance, rolling upgrades, and elastic node operations across an Always On Gold topology (4 data + 1 witness)."
 
   settings {
+    timelimit {
+      duration = "1h"
+    }
+
     idle {
       enabled = false
+      timeout = "15m"
     }
   }
 

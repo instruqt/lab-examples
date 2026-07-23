@@ -3,8 +3,13 @@ resource "lab" "container_terminal" {
   description = "This is an example lab with a single container sandbox and a terminal tab."
 
   settings {
+    timelimit {
+      duration = "1h"
+    }
+
     idle {
       enabled = false
+      timeout = "15m"
     }
   }
 

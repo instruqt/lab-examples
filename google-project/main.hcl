@@ -3,8 +3,13 @@ resource "lab" "google_project" {
   description = "How to chain cloud accounts and other resources together"
 
   settings {
+    timelimit {
+      duration = "1h"
+    }
+
     idle {
       enabled = false
+      timeout = "15m"
     }
   }
 
