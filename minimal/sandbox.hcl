@@ -9,6 +9,11 @@ resource "container" "ubuntu" {
 
   command = ["tail", "-f", "/dev/null"]
 
+  resources {
+    cpu    = 250
+    memory = 256
+  }
+
 	network {
 		id = resource.network.main.meta.id
 	}

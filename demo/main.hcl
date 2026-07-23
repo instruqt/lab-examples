@@ -3,10 +3,14 @@ resource "lab" "demo" {
   description = "This is a demo example lab."
 
   settings {
+    timelimit {
+      duration = "1h"
+    }
+
     idle {
       show_warning = true
       enabled = true
-      timeout = "2m"
+      timeout = "15m"
     }
   }
 
