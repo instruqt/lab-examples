@@ -8,7 +8,7 @@ resource "lab" "container_terminal" {
     }
 
     idle {
-      enabled = false
+      enabled = true
       timeout = "15m"
     }
   }

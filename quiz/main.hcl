@@ -8,7 +8,7 @@ resource "lab" "quiz" {
     }
 
     idle {
-      enabled = false
+      enabled = true
       timeout = "15m"
     }
   }

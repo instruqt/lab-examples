@@ -8,6 +8,7 @@ resource "lab" "in-use-assets" {
     }
 
     idle {
+      enabled = true
       timeout = "15m"
     }
   }

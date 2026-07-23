@@ -8,7 +8,7 @@ resource "lab" "task" {
     }
 
     idle {
-      enabled = false
+      enabled = true
       timeout = "15m"
     }
   }

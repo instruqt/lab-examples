@@ -8,6 +8,7 @@ resource "lab" "k8s_single_node" {
     }
 
     idle {
+      enabled = true
       timeout = "15m"
     }
   }
